@@ -1,8 +1,17 @@
 require 'rails_helper'
 
 describe Post, type: :model do
+    it 'has a valid factroy' do
+        expect(build(:post)).to be_instance_of(Post)
+      end
+
+    describe 'data and associations' do
+        it { should have_db_column(:title) }
+        it { should have_db_column(:body) }
+        it { should have_db_column(:published) }
+    end
+
     before do
-        # @post = Post.new(title: "A New Post Title", body: "Post body content", )
         @post = build(:post)
     end
 
@@ -11,9 +20,7 @@ describe Post, type: :model do
     it { should respond_to(:title) }
     it { should respond_to(:body) }
     it { should respond_to(:published) }
-
     it { should be_valid }
-
 
     describe "when title is not present" do
         before { @post.title = " " }
