@@ -7,7 +7,17 @@
 </head>
 <body>
 
-<%= yield %>
+    <div class="wrapper">
+        <div class="page">
+            <div class="page-hd"></div>
+            <div class="page-bd">
+                <%= yield %>
+            </div>
+            <div class="page-ft"></div>
+        </div>
+    </div>
 
+
+<%= debug(params) if Rails.env.development? %>
 </body>
 </html>
