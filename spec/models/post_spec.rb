@@ -28,7 +28,7 @@ describe Post, type: :model do
     end
 
     describe "when title is longer than 50 chars" do
-        before { @post.title = "a" * 51 }
+        before { @post.title = "a" * 101 }
         it { should_not be_valid }
     end
 

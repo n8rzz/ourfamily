@@ -1,4 +1,4 @@
-<h1 class="hdg hdg_2">New Post</h1>
+<h1 class="hdg hdg_2">Edit Post</h1>
 <%= form_for(@post) do |f| %>
     <ul>
         <li>
@@ -10,7 +10,7 @@
             <%= f.text_area :body, :class => 'input-textarea' %>
         </li>
         <li>
-            <%= f.submit "Add New Post", :class => 'btn' %>
+            <%= f.submit "Add New Post", :class => 'btn btn-sm' %>
         </li>
     </ul>
 <% end %>

@@ -16,6 +16,8 @@ group :development, :test do
   gem 'capybara', '~> 2.4.4'
   gem 'byebug'
   gem 'spring'
+  gem 'faker', '~> 1.5.0'
+  gem 'populator', '~> 1.0.0'
 end
 
 group :test do
