@@ -1,2 +1,10 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h2 class="hdg"><%= @post.title %></h2>
+<h3 class="hdg"><%= time_ago_in_words(@post.published) %> ago</h3>
+<div>
+    <%= @post.body %>
+</div>
+
+<ul class="hlist">
+    <li><%= link_to "New Post", new_post_path %></li>
+    <li><%= link_to "Edit Post", edit_post_path(@post.id) %></li>
+</ul>
