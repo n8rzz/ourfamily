@@ -1,0 +1,32 @@
+/*doc
+---
+title: Box
+name: box
+category: Base
+---
+
+See Media section for additional usage of the box module
+
+```html_example
+    <div class="box">box</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Box
+------------------------------------------------------------------------ */
+.box {
+    padding: 20px;
+    background-color: #efefef;
+    border: 1px solid #3071a9;
+}
+
+.box-hd {
+    margin-bottom: 20px;
+}
+
+.box-bd {
+
+}
+
+.box-ft {}
+

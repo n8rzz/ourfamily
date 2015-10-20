@@ -1,0 +1,31 @@
+{
+  "name": "ourfamily",
+  "version": "1.0.0",
+  "description": "A social networking site for families to connect with each other",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n8rzz/ourfamily.git"
+  },
+  "keywords": [
+    "rails",
+    "rspec",
+    "gulp"
+  ],
+  "author": "Nate Geslin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n8rzz/ourfamily/issues"
+  },
+  "homepage": "https://github.com/n8rzz/ourfamily#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4"
+  }
+}

@@ -1,0 +1,50 @@
+/*doc
+---
+title: Alert
+name: alert
+category: Base
+---
+
+```html_example
+<div class="alert">
+    Something to draw attention to
+</div>
+<div class="alert alert-success">
+    Something happened successfully
+</div>
+<div class="alert alert-caution">
+    A Caution to draw attention to
+</div>
+<div class="alert alert-error">
+    An Error to draw attention to
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Modules
+------------------------------------------------------------------------ */
+.alert {
+    margin-bottom: 10px;
+    padding: 15px;
+    position: relative;
+    color: #246;
+    background-color: #e2eef9;
+    border: 1px solid #bac6d3;
+    border-radius: 3px;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-caution {
+    color: #4c4a42;
+    background-color: #fff9ea;
+    border-color: #dfd8c2;
+}
+.alert-error {
+    color: #911;
+    background-color: #fcdede;
+    border-color: #d2b2b2;
+}
