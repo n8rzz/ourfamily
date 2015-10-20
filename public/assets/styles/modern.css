@@ -1,0 +1,1045 @@
+/* ---------------------------------------------------------------------
+ Modern Styles
+------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------
+RESET CSS (thanks Eric Meyer)
+------------------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+:focus {
+  outline: 0; }
+
+html {
+  overflow-y: scroll;
+  /* Always show a vertical scrollbar, even when there is no scrolling */ }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* ---------------------------------------------------------------------
+ HTML5 Element Reset
+------------------------------------------------------------------------ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+audio, canvas, video, progress, picture {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+/* ---------------------------------------------------------------------
+ Form Reset Styles
+------------------------------------------------------------------------ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  box-sizing: content-box; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* ---------------------------------------------------------------------
+    Variables
+--------------------------------------------------------------------- */
+/* Colors */
+/* Misc Colors */
+.util-isHidden {
+  display: none !important; }
+
+.util-isVisuallyHidden {
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  left: -9999px;
+  clip: rect(1px 1px 1px 1px) !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; }
+
+.util-isTruncated {
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.util-breakWord {
+  word-break: break-word; }
+
+@media screen and (max-width: 767px) {
+  .util-isNotScrollable {
+    overflow: hidden; } }
+
+@media screen and (min-width: 768px) {
+  .util-isHiddenMD {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .util-isHiddenSM {
+    display: none !important; } }
+
+/*doc
+---
+title: Body Text
+name: body_text
+category: Typography
+---
+
+```html_example
+<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+```
+*/
+/*doc
+---
+title: Inline Elements
+name: inline_elements
+category: Typography
+---
+Standard inline elements
+
+```html_example
+<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>
+```
+*/
+/*doc
+---
+title: Blockquote
+name: blockquote
+category: Typography
+---
+
+```html_example
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+```
+*/
+/*doc
+---
+title: Unordered Lists
+name: unordered_lists
+category: Typography
+---
+
+```html_example
+<ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ul>
+```
+*/
+/*doc
+---
+title: Ordered Lists
+name: orderd_lists
+category: Typography
+---
+
+```html_example
+<ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ol>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ol>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ol>
+```
+*/
+img {
+  max-width: 100%; }
+
+/* ---------------------------------------------------------------------
+ Modules
+------------------------------------------------------------------------ */
+/*doc
+---
+title: Alert
+name: alert
+category: Base
+---
+
+```html_example
+<div class="alert">
+    Something to draw attention to
+</div>
+<div class="alert alert-success">
+    Something happened successfully
+</div>
+<div class="alert alert-caution">
+    A Caution to draw attention to
+</div>
+<div class="alert alert-error">
+    An Error to draw attention to
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Modules
+------------------------------------------------------------------------ */
+.alert {
+  margin-bottom: 10px;
+  padding: 15px;
+  position: relative;
+  color: #246;
+  background-color: #e2eef9;
+  border: 1px solid #bac6d3;
+  border-radius: 3px; }
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6; }
+
+.alert-caution {
+  color: #4c4a42;
+  background-color: #fff9ea;
+  border-color: #dfd8c2; }
+
+.alert-error {
+  color: #911;
+  background-color: #fcdede;
+  border-color: #d2b2b2; }
+
+/*doc
+---
+title: Blocks
+name: blocks
+category: Base
+---
+
+###See Media section for additional usage of the blocks module
+
+```html_example
+<ul class="blocks">
+    <li class="blocks-example blocks_2up">2 blocks</li>
+    <li class="blocks-example blocks_2up">2 blocks</li>
+</ul>
+```
+*/
+/* ---------------------------------------------------------------------
+ Blocks
+------------------------------------------------------------------------ */
+.blocks {
+  margin: -20px 0 0 -20px;
+  font-size: 0; }
+
+.blocks > * {
+  display: inline-block;
+  padding: 20px 0 0 20px;
+  vertical-align: top;
+  font-size: 16px;
+  box-sizing: border-box; }
+
+.blocks_2up {
+  width: 50%; }
+
+.blocks_3up {
+  width: 33.3334%; }
+
+.blocks_4up {
+  width: 25%; }
+
+/*doc
+---
+title: Box
+name: box
+category: Base
+---
+
+See Media section for additional usage of the box module
+
+```html_example
+    <div class="box">box</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Box
+------------------------------------------------------------------------ */
+.box {
+  padding: 20px;
+  background-color: #efefef;
+  border: 1px solid #3071a9; }
+
+.box-hd {
+  margin-bottom: 20px; }
+
+/*doc
+---
+title: Buttons
+name: buttons
+category: Base
+---
+
+```html_example
+<div>
+    <a href="#" class="btn">Primary Button</a>
+    <a href="#" class="btn btn_disabled">Disabled Button</a>
+    <a href="#" class="btn btn_cta">Call to Action</a>
+    <a href="#" class="btn btn_block" role="button">Link button</a>
+</div>
+<div>
+    <input type="submit" class="btn" value="Primary Button" />
+    <input type="submit" class="btn btn_disabled" value="Disabled Button" disabled />
+    <input type="submit" class="btn btn_cta" value="Call to Action" />
+    <input type="submit" class="btn btn_block" value="Block" />
+</div>
+<div>
+    <button type="submit" class="btn">Primary Button</button>
+    <button type="submit" class="btn btn_disabled" disabled>Disabled Button</button>
+    <button type="submit" class="btn btn_cta">Call to Action</button>
+    <button type="submit" class="btn btn_block">Button button</button>
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Buttons
+------------------------------------------------------------------------ */
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 16px;
+  border: 0;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+  background: #666666;
+  color: #eeeeee;
+  /* fallback for non rgba browsers */
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  /* set to normal to .btn can be usd on inputs in firefox with consistency */
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: all 0.12s ease-in-out; }
+
+.btn:hover {
+  background: #333333; }
+
+.btn_disabled {
+  color: #666666;
+  /* fallback for non rgba browsers */
+  color: rgba(0, 0, 0, 0.3);
+  background: #cccccc !important;
+  /* override hovers - disabled buttons don't have hover states */ }
+
+.btn_cta {
+  background: #d53b3b; }
+
+.btn_cta:hover {
+  background: #b81818; }
+
+.btn_block {
+  display: block;
+  width: 90%;
+  text-align: center; }
+
+/* ---------------------------------------------------------------------
+ Feature
+------------------------------------------------------------------------ */
+/*doc
+---
+title: Field
+name: field
+category: Base
+---
+
+```html_example
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-sm"placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-md"placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-lg"placeholder="Default Text" />
+</div>
+```
+*/
+/*doc
+---
+title: Field Block
+parent: field
+name: field_block
+category: Base
+---
+
+```html_example
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-sm mix-fieldInput_block" placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-md mix-fieldInput_block" placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-lg mix-fieldInput_block" placeholder="Default Text" />
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Form Inputs
+------------------------------------------------------------------------ */
+.fieldInput {
+  padding-left: 7px;
+  border-radius: 3px; }
+
+.fieldInput-sm {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.fieldInput-md {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.fieldInput-lg {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.mix-fieldInput_block {
+  display: block;
+  width: 95%; }
+
+/*doc
+---
+title: Grid
+name: grid
+category: Layout
+---
+
+Each row is contained in a `.grid-row` class.
+
+```html_example
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_6of12">6of12</div>
+    <div class="grid-col-example grid-col grid-col_6of12">6of12</div>
+</div>
+
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_3of12">3of12</div>
+    <div class="grid-col-example grid-col grid-col_9of12">9of12</div>
+</div>
+
+<br/ >
+
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_1of12">1of12</div>
+    <div class="grid-col-example grid-col grid-col_11of12">11of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_2of12">2of12</div>
+    <div class="grid-col-example grid-col grid-col_10of12">10of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_3of12">3of12</div>
+    <div class="grid-col-example grid-col grid-col_9of12">9of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_4of12">4of12</div>
+    <div class="grid-col-example grid-col grid-col_8of12">8of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_5of12">5of12</div>
+    <div class="grid-col-example grid-col grid-col_7of12">7of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_6of12">6of12</div>
+    <div class="grid-col-example grid-col grid-col_6of12">6of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_7of12">7of12</div>
+    <div class="grid-col-example grid-col grid-col_5of12">5of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_8of12">8of12</div>
+    <div class="grid-col-example grid-col grid-col_4of12">4of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_9of12">9of12</div>
+    <div class="grid-col-example grid-col grid-col_3of12">3of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_10of12">10of12</div>
+    <div class="grid-col-example grid-col grid-col_2of12">2of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_11of12">11of12</div>
+    <div class="grid-col-example grid-col grid-col_1of12">1of12</div>
+</div>
+<div class="grid">
+    <div class="grid-col-example grid-col grid-col_12of12">Col 1</div>
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ 12 Column Grid
+------------------------------------------------------------------------ */
+.grid:before,
+.grid:after {
+  content: " ";
+  display: table; }
+
+.grid:after {
+  clear: both; }
+
+.grid-col {
+  float: left; }
+
+.grid-col + .grid-col {
+  margin-left: 2.127663%; }
+
+.grid-col_1of12 {
+  width: 6.382989%; }
+
+.grid-col_2of12 {
+  width: 14.893641%; }
+
+.grid-col_3of12 {
+  width: 23.404293%; }
+
+.grid-col_4of12 {
+  width: 31.914945%; }
+
+.grid-col_5of12 {
+  width: 40.425597%; }
+
+.grid-col_6of12 {
+  width: 48.936249%; }
+
+.grid-col_7of12 {
+  width: 57.446901%; }
+
+.grid-col_8of12 {
+  width: 65.957553%; }
+
+.grid-col_9of12 {
+  width: 74.468205%; }
+
+.grid-col_10of12 {
+  width: 82.978857%; }
+
+.grid-col_11of12 {
+  width: 91.489509%; }
+
+.grid-col_12of12 {
+  width: 100%; }
+
+.grid-col-example {
+  margin-bottom: 10px;
+  margin-right: -5px;
+  padding-left: 5px;
+  color: #eee;
+  background-color: #037bac; }
+
+/*doc
+---
+title: Headings
+name: headings
+category: Typography
+---
+
+```html_example
+<h1 class="hdg hdg_1">hdg 1</h1>
+<h2 class="hdg hdg_2">hdg 2</h2>
+<h3 class="hdg hdg_3">hdg 3</h3>
+<h4 class="hdg hdg_4">hdg 4</h4>
+<h5 class="hdg hdg_5">hdg 5</h5>
+```
+*/
+/* ---------------------------------------------------------------------
+ Headings
+------------------------------------------------------------------------ */
+.hdg {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: normal;
+  line-height: 1.2; }
+
+.hdg_1 {
+  font-size: 26px; }
+
+.hdg_2 {
+  font-size: 22px; }
+
+.hdg_3 {
+  font-size: 20px; }
+
+.hdg_4 {
+  font-size: 16px; }
+
+.hdg_5 {
+  font-size: 12px; }
+
+.mix-hdg_caps {
+  text-transform: uppercase; }
+
+.mix-hdg_blue {
+  color: #0066cc; }
+
+/*doc
+---
+title: Hlist
+name: hlist
+category: Base
+---
+
+```html_example
+<ul class="hlist">
+    <li>hlist</li>
+    <li>hlist</li>
+    <li>hlist</li>
+    <li>hlist</li>
+</ul>
+```
+*/
+/*doc
+---
+title: Hlist tight
+parent: hlist
+name: hlist_tight
+category: Base
+---
+
+Horizontal list elements with tight spacing:
+
+```html_example
+<ul class="hlist hlist_tight">
+    <li>hlist tight</li>
+    <li>hlist tight</li>
+    <li>hlist tight</li>
+    <li>hlist tight</li>
+</ul>
+```
+*/
+/*doc
+---
+title: Hlist loose
+parent: hlist
+name: hlist_loose
+category: Base
+---
+
+Horizontal list elements with loose spacing:
+
+```html_example
+<ul class="hlist hlist_loose">
+    <li>hlist loose</li>
+    <li>hlist loose</li>
+    <li>hlist loose</li>
+    <li>hlist loose</li>
+</ul>
+```
+*/
+/*doc
+---
+title: Hlist divided
+parent: hlist
+name: hlist_divided
+category: Base
+---
+
+Horizontal list elements with pipes separating each element:
+
+```html_example
+<ul class="hlist mix-hlist_divided">
+    <li>hlist divided</li>
+    <li>hlist divided</li>
+    <li>hlist divided</li>
+    <li>hlist divided</li>
+</ul>
+```
+*/
+/* ---------------------------------------------------------------------
+ hlist
+------------------------------------------------------------------------ */
+.hlist > * {
+  display: inline-block;
+  padding: 5px; }
+
+.hlist_tight {
+  margin-left: 5px; }
+
+.hlist_loose {
+  margin-left: 15px; }
+
+.mix-hlist_divided > * + * {
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid; }
+
+/*doc
+---
+title: Media Object
+name: media_object
+category: Media
+---
+
+```html_example
+<div class="box">
+    <div class="media">
+        <div class="media-img">
+            <img src="http://placehold.it/100x100" alt=""/>
+        </div>
+        <div class="media-bd">
+            <div class="preview">
+                <div class="preview-hd">
+                    <h2 class="hdg hdg_2 mix-hdg_caps">Preview Headline goes here</h2>
+                </div>
+                <div class="preview-subhd">
+                    <h3 class="hdg hdg_4">Preview SubHeading goes here</h3>
+                </div>
+                <div class="preview-bd">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Media Object
+------------------------------------------------------------------------ */
+.media {
+  overflow: hidden; }
+
+.media-img {
+  float: left;
+  margin-right: 20px; }
+
+.media-bd {
+  overflow: hidden; }
+
+/*doc
+---
+title: Preview
+name: preview
+category: Media
+---
+
+```html_example
+<div class="box">
+    <div class="box-hd">
+        <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+    </div>
+    <div class="box-bd">
+        <div class="preview">
+            <div class="preview-img">
+                <img src="http://fillmurray.com/g/800/400" alt=""/>
+            </div>
+            <div class="preview-hd">
+                <h2 class="hdg hdg_2">Feature Headline</h2>
+            </div>
+            <div class="preview-bd">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+        </div>
+    </div>
+</div>
+```
+*/
+/*doc
+---
+title: Preview 2up
+parent: preview
+name: preview_2up
+category: Media
+---
+
+```html_example
+<ul class="blocks">
+    <li class="blocks_2up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="blocks_2up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+```
+*/
+/*doc
+---
+title: Preview 3up
+parent: preview
+name: preview_3up
+category: Media
+---
+
+```html_example
+<ul class="blocks">
+    <li class="blocks_3up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="blocks_3up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="blocks_3up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+```
+*/
+/* ---------------------------------------------------------------------
+ Preview
+------------------------------------------------------------------------ */
+.preview-hd {
+  margin-bottom: 2px; }
+
+.preview-subhd {
+  margin-bottom: 12px; }
+
+/*doc
+---
+title: Tabbed Nav
+name: tabbed_nav
+category: Navigation
+---
+
+```html_example
+<div class="tabNav">
+  <div class="tabNav-group">
+    <a href="#" class="tabNav-tab tabNav-tab_isSelected">Foo tab</a>
+    <a href="#" class="tabNav-tab">Bar tab</a>
+  </div>
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Tabbed Navigation
+------------------------------------------------------------------------ */
+.tabNav {
+  border-bottom: 1px solid #dddddd; }
+
+.tabNav-group {
+  margin-bottom: -1px; }
+
+.tabNav-tab {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-bottom: 0; }
+
+.tabNav-tab_isSelected {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+  border-radius: 3px 3px 0 0; }
+
+/* ---------------------------------------------------------------------
+ Vertical list
+------------------------------------------------------------------------ */
+.vlist > * {
+  padding: 10px; }
+
+.mix-vlist_divided > * + * {
+  border-top: 1px solid; }
+
+/* ---------------------------------------------------------------------
+ Vertical Rhythm
+
+ An abstract inter-modular object used to add space between elements
+------------------------------------------------------------------------ */
+.vr {
+  margin-bottom: 4px; }
+
+.vr_x2 {
+  margin-bottom: 8px; }
+
+.vr_x4 {
+  margin-bottom: 16px; }
+
+.vr_x6 {
+  margin-bottom: 24px; }
+
+/*doc
+---
+title: Wrapper
+name: wrapper
+category: Layout
+---
+
+Page body elements are wrapped with a wrapper div
+
+```html_example
+<div class="wrapper">
+<!-- page contents here -->
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Wrapper
+------------------------------------------------------------------------ */
+.wrapper {
+  padding: 20px; }

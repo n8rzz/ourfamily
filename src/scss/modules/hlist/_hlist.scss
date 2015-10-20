@@ -1,0 +1,90 @@
+/*doc
+---
+title: Hlist
+name: hlist
+category: Base
+---
+
+```html_example
+<ul class="hlist">
+    <li>hlist</li>
+    <li>hlist</li>
+    <li>hlist</li>
+    <li>hlist</li>
+</ul>
+```
+*/
+/*doc
+---
+title: Hlist tight
+parent: hlist
+name: hlist_tight
+category: Base
+---
+
+Horizontal list elements with tight spacing:
+
+```html_example
+<ul class="hlist hlist_tight">
+    <li>hlist tight</li>
+    <li>hlist tight</li>
+    <li>hlist tight</li>
+    <li>hlist tight</li>
+</ul>
+```
+*/
+
+/*doc
+---
+title: Hlist loose
+parent: hlist
+name: hlist_loose
+category: Base
+---
+
+Horizontal list elements with loose spacing:
+
+```html_example
+<ul class="hlist hlist_loose">
+    <li>hlist loose</li>
+    <li>hlist loose</li>
+    <li>hlist loose</li>
+    <li>hlist loose</li>
+</ul>
+```
+*/
+
+/*doc
+---
+title: Hlist divided
+parent: hlist
+name: hlist_divided
+category: Base
+---
+
+Horizontal list elements with pipes separating each element:
+
+```html_example
+<ul class="hlist mix-hlist_divided">
+    <li>hlist divided</li>
+    <li>hlist divided</li>
+    <li>hlist divided</li>
+    <li>hlist divided</li>
+</ul>
+```
+*/
+/* ---------------------------------------------------------------------
+ hlist
+------------------------------------------------------------------------ */
+.hlist > * {
+    display: inline-block;
+    padding: 5px;
+}
+
+.hlist_tight { margin-left: 5px; }
+.hlist_loose { margin-left: 15px; }
+.mix-hlist_divided > * + * {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid;
+}

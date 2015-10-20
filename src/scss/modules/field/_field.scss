@@ -1,0 +1,72 @@
+/*doc
+---
+title: Field
+name: field
+category: Base
+---
+
+```html_example
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-sm"placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-md"placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-lg"placeholder="Default Text" />
+</div>
+```
+*/
+/*doc
+---
+title: Field Block
+parent: field
+name: field_block
+category: Base
+---
+
+```html_example
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-sm mix-fieldInput_block" placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-md mix-fieldInput_block" placeholder="Default Text" />
+</div>
+
+<div class="vr vr_x4">
+    <input type="text" class="fieldInput fieldInput-lg mix-fieldInput_block" placeholder="Default Text" />
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Form Inputs
+------------------------------------------------------------------------ */
+.fieldInput {
+    padding-left: 7px;
+    border-radius: 3px;
+}
+
+.fieldInput-sm {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.fieldInput-md {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fieldInput-lg {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.mix-fieldInput_block {
+    display: block;
+    width: 95%;
+
+}

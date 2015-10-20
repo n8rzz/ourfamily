@@ -2,7 +2,16 @@
 <html>
 <head>
   <title>OurFamily</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link rel="stylesheet" href="./assets/styles/modern.css">
+  <style>
+    .debug_dump {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #efefef;
+      border-radius: 5px;
+    }
+  </style>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,6 +27,6 @@
     </div>
 
 
-<%= debug(params) if Rails.env.development? %>
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>

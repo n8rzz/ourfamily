@@ -1,0 +1,41 @@
+/*doc
+---
+title: Tabbed Nav
+name: tabbed_nav
+category: Navigation
+---
+
+```html_example
+<div class="tabNav">
+  <div class="tabNav-group">
+    <a href="#" class="tabNav-tab tabNav-tab_isSelected">Foo tab</a>
+    <a href="#" class="tabNav-tab">Bar tab</a>
+  </div>
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Tabbed Navigation
+------------------------------------------------------------------------ */
+.tabNav {
+    border-bottom: 1px solid #dddddd;
+}
+.tabNav-group {
+margin-bottom: -1px;
+}
+.tabNav-tab {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-bottom: 0;
+}
+
+.tabNav-tab_isSelected {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+    border-radius: 3px 3px 0 0;
+}

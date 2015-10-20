@@ -1,0 +1,172 @@
+/*doc
+---
+title: Preview
+name: preview
+category: Media
+---
+
+```html_example
+<div class="box">
+    <div class="box-hd">
+        <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+    </div>
+    <div class="box-bd">
+        <div class="preview">
+            <div class="preview-img">
+                <img src="http://fillmurray.com/g/800/400" alt=""/>
+            </div>
+            <div class="preview-hd">
+                <h2 class="hdg hdg_2">Feature Headline</h2>
+            </div>
+            <div class="preview-bd">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+        </div>
+    </div>
+</div>
+```
+*/
+
+/*doc
+---
+title: Preview 2up
+parent: preview
+name: preview_2up
+category: Media
+---
+
+```html_example
+<ul class="blocks">
+    <li class="blocks_2up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="blocks_2up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+```
+*/
+
+/*doc
+---
+title: Preview 3up
+parent: preview
+name: preview_3up
+category: Media
+---
+
+```html_example
+<ul class="blocks">
+    <li class="blocks_3up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="blocks_3up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="blocks_3up">
+        <div class="box">
+            <div class="box-hd">
+                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
+            </div>
+            <div class="box-bd">
+                <div class="preview">
+                    <div class="preview-img">
+                        <img src="http://fillmurray.com/g/800/400" alt=""/>
+                    </div>
+                    <div class="preview-hd">
+                        <h2 class="hdg hdg_2">Feature Headline</h2>
+                    </div>
+                    <div class="preview-bd">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+```
+*/
+/* ---------------------------------------------------------------------
+ Preview
+------------------------------------------------------------------------ */
+.preview {}
+
+.preview-img {}
+
+.preview-hd {
+    margin-bottom: 2px;
+}
+
+.preview-subhd {
+    margin-bottom: 12px;
+}
+
+.preview-bd {}
