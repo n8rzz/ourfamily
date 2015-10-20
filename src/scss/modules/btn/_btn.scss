@@ -1,0 +1,89 @@
+/*doc
+---
+title: Buttons
+name: buttons
+category: Base
+---
+
+```html_example
+<div>
+    <a href="#" class="btn">Primary Button</a>
+    <a href="#" class="btn btn_disabled">Disabled Button</a>
+    <a href="#" class="btn btn_cta">Call to Action</a>
+    <a href="#" class="btn btn_block" role="button">Link button</a>
+</div>
+<div>
+    <input type="submit" class="btn" value="Primary Button" />
+    <input type="submit" class="btn btn_disabled" value="Disabled Button" disabled />
+    <input type="submit" class="btn btn_cta" value="Call to Action" />
+    <input type="submit" class="btn btn_block" value="Block" />
+</div>
+<div>
+    <button type="submit" class="btn">Primary Button</button>
+    <button type="submit" class="btn btn_disabled" disabled>Disabled Button</button>
+    <button type="submit" class="btn btn_cta">Call to Action</button>
+    <button type="submit" class="btn btn_block">Button button</button>
+</div>
+```
+*/
+/* ---------------------------------------------------------------------
+ Buttons
+------------------------------------------------------------------------ */
+.btn {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 16px;
+    border: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+    background: #666666;
+    color: #eeeeee; /* fallback for non rgba browsers */
+    color: rgba(255,255,255,.9);
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal; /* set to normal to .btn can be usd on inputs in firefox with consistency */
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-transition: all .12s ease-in-out;
+    -moz-transition: all .12s ease-in-out;
+    -ms-transition: all .12s ease-in-out;
+    -o-transition: all .12s ease-in-out;
+    transition: all .12s ease-in-out;
+}
+
+.btn:hover{
+    background: #333333;
+}
+
+.btn_disabled {
+    color: #666666; /* fallback for non rgba browsers */
+    color: rgba(0,0,0,.3);
+    background: #cccccc !important; /* override hovers - disabled buttons don't have hover states */
+}
+
+.btn_cta {
+    background: #d53b3b;
+}
+
+.btn_cta:hover {
+    background: #b81818;
+}
+
+.btn_block {
+    display: block;
+    width: 90%;
+    text-align: center;
+}
+
+.btn_group {}

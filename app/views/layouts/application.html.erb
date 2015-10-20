@@ -2,12 +2,47 @@
 <html>
 <head>
   <title>OurFamily</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link rel="stylesheet" href="/assets/styles/modern.css">
+
+  <style>
+    .debug_dump {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #efefef;
+      border-radius: 5px;
+    }
+  </style>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+    <div class="wrapper">
+        <div class="page">
 
+            <%= render 'layouts/header' %>
+
+            <div class="page-bd">
+                <div class="wrapper">
+                    <% flash.each do |message_type, message| %>
+                      <div class="alert alert-<%= message_type %>">
+                        <%= message %>
+                      </div>
+                    <% end %>
+                </div>
+
+
+                <%= yield %>
+
+            </div>
+
+            <%= render 'layouts/footer' %>
+
+        </div>
+    </div>
+
+
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
