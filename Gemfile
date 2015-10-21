@@ -20,6 +20,7 @@ group :development, :test do
   gem 'faker', '~> 1.5.0'
   gem 'populator', '~> 1.0.0'
   gem 'better_errors', '~>2.1.1'
+  gem 'database_cleaner'
 end
 
 group :test do

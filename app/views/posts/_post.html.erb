@@ -2,6 +2,7 @@
     <div class="excerpt">
         <div class="excerpt-hd">
             <h2 class="hdg"><%= link_to post.title, post %></h2>
+            <div><%= time_ago_in_words(post.published) %> ago</div>
         </div>
         <div class="excerpt-bd">
             <%= post.body %>
