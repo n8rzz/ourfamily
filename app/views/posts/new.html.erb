@@ -1,5 +1,7 @@
 <h2 class="hdg hdg_2">New Post</h2>
 <%= form_for(@post) do |f| %>
+    <%= render 'shared/error_messages', object: @post %>
+
     <ul>
         <li>
             <%= f.label :title, :class => 'input-label' %>

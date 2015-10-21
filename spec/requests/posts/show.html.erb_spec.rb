@@ -9,22 +9,24 @@ describe "posts/show.html.erb", type: :view do
 
         before { visit post_path(3) }
 
+        it { should render_template(:show) }
         it { should have_css('h1', text: 'OurFamily') }
         it { should have_css('h2', text: post.title) }
         it { should have_css('h3', text: time_ago_in_words(post.published)) }
         it { should have_css('div', text: post.body) }
         it { should have_css('a', text: 'New Post') }
         it { should have_css('a', text: 'Edit Post') }
+        # it { should have_css('a', text: 'Delete Post') }
         it { should have_css('a', text: 'Previous Post') }
         it { should have_css('a', text: 'Next Post') }
 
-        describe "newest post should have link to previous post" do
+        describe "newest post" do
             before { visit post_path(1) }
 
             it { should_not have_css('a', text: 'Previous Post') }
         end
 
-        describe "oldest post should have link to next post" do
+        describe "oldest post" do
             before { visit post_path(5) }
 
             it { should_not have_css('a', text: 'Next Post') }
