@@ -3,10 +3,11 @@ namespace :db do
     task :populate => :environment do
         require 'populator'
         require 'faker'
-        25.times do |n|
+        30.times do |n|
             Post.create!(title: Faker::Lorem.sentence,
                          body: Faker::Lorem.paragraph,
-                         published: Faker::Date.backward(30))
+                         created_at: Faker::Time.backward(182, :evening)
+            )
         end
     end
 end
