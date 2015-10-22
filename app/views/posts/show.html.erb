@@ -1,5 +1,5 @@
 <h2 class="hdg"><%= @post.title %></h2>
-<h3 class="hdg"><%= time_ago_in_words(@post.published) %> ago</h3>
+<h3 class="hdg"><%= time_ago_in_words(@post.created_at) %> ago</h3>
 <div>
     <%= @post.body %>
 </div>

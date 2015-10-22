@@ -3,4 +3,13 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
 
   default_scope { order('created_at DESC') }
+
+
+  def next
+    self.class.where("id > ?", id).first
+  end
+
+  def previous
+    self.class.where("id < ?", id).last
+  end
 end

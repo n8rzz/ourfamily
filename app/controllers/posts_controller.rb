@@ -5,8 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @previous = Post.where("id < ?", params[:id]).order("id DESC").first
-    @next = Post.where("id > ?", params[:id]).order("id ASC").first
+    @previous = @post.previous
+    @next = @post.next
   end
 
   def new
