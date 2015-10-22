@@ -1,5 +1,5 @@
 <h2 class="hdg hdg_2">New Post</h2>
-<%= form_for(@post) do |f| %>
+<%= form_for @post, :html => { :multipart => true } do |f| %>
     <%= render 'shared/error_messages', object: @post %>
 
     <ul>
@@ -10,6 +10,10 @@
         <li>
             <%= f.label :body, :class => 'input-label' %>
             <%= f.text_area :body, :class => 'input-textarea' %>
+        </li>
+        <li>
+            <%= f.label :photo, "Photo" %>
+            <%= f.file_field :photo %>
         </li>
         <li>
             <%= f.submit "Add New Post", :class => 'btn' %>
