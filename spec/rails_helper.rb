@@ -4,9 +4,9 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 require 'shoulda/matchers'
-require "capybara/rails"
+require 'capybara/rails'
 # require 'capybara/rspec'
-require "capybara/rspec/matchers"
+require 'capybara/rspec/matchers'
 require 'paperclip/matchers'
 
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -32,7 +32,7 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_path = '#{::Rails.root}/spec/fixtures'
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -59,8 +59,6 @@ RSpec.configure do |config|
   # config.include Capybara::RspecMathcers
   config.include Paperclip::Shoulda::Matchers
 
-
-
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
@@ -69,7 +67,7 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
   end
 
-  config.before(:each, :js => true) do
+  config.before(:each, js: true) do
     DatabaseCleaner.strategy = :truncation
   end
 

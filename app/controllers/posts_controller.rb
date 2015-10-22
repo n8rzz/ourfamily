@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      flash[:success] = "New Post Added!"
+      flash[:success] = 'New Post Added!'
       redirect_to root_path
     else
       render 'new'
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
-      flash[:success] = "Post Updated"
+      flash[:success] = 'Post Updated'
       redirect_to @post
     else
       render 'edit'
@@ -39,14 +39,13 @@ class PostsController < ApplicationController
 
   def destroy
     Post.find(params[:id]).destroy
-    flash[:success] = "Post Deleted"
+    flash[:success] = 'Post Deleted'
     redirect_to root_path
   end
 
   private
 
-    def post_params
-      params.require(:post).permit(:title, :body, :published, :photo)
-    end
-
+  def post_params
+    params.require(:post).permit(:title, :body, :published, :photo)
+  end
 end
