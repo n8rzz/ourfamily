@@ -1,7 +1,6 @@
 include ActionDispatch::TestProcess
 
 FactoryGirl.define do
-
   factory :post do
     sequence(:id) { |n| "#{n}" }
     title "MyString"

@@ -59,8 +59,6 @@ RSpec.configure do |config|
   # config.include Capybara::RspecMathcers
   config.include Paperclip::Shoulda::Matchers
 
-
-
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
@@ -69,7 +67,7 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
   end
 
-  config.before(:each, :js => true) do
+  config.before(:each, js: true) do
     DatabaseCleaner.strategy = :truncation
   end
 

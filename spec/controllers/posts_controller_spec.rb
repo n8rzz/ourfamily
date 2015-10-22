@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
-
   describe "#index" do
     before do
       visit posts_path
@@ -18,7 +17,6 @@ RSpec.describe PostsController, type: :controller do
       visit new_post_path
     end
 
-      it { should render_template("new") }
+    it { should render_template("new") }
   end
-
 end

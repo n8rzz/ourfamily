@@ -14,7 +14,6 @@ describe "posts/edit.html.erb", type: :view do
     it { should have_selector('input[type="submit"]') }
     it { should have_selector('input[value="Update Post"]') }
 
-
     describe "with invalid title" do
         let(:new_title) { '' }
 
