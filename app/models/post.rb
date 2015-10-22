@@ -5,11 +5,11 @@ class Post < ActiveRecord::Base
   default_scope { order('created_at DESC') }
 
 
-  def next
+  def older
     self.class.where("id > ?", id).first
   end
 
-  def previous
+  def newer
     self.class.where("id < ?", id).last
   end
 end

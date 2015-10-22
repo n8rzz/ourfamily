@@ -10,12 +10,12 @@
 </ul>
 
 <ul class="hlist">
-    <% if @previous %>
-        <li><%= link_to "Previous Post", @previous %></li>
+    <% if @newer %>
+        <li><%= link_to truncate(@newer.title, :length => 20), @newer %></li>
     <% end %>
 
-    <% if @next %>
-        <li><%= link_to "Next Post", @next %></li>
+    <% if @older %>
+        <li><%= link_to truncate(@older.title, :length => 20), @older %></li>
     <% end %>
 </ul>
 
