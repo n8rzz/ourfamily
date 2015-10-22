@@ -1,5 +1,5 @@
 <h2 class="hdg"><%= @post.title %></h2>
-<h3 class="hdg"><%= time_ago_in_words(@post.published) %> ago</h3>
+<h3 class="hdg"><%= time_ago_in_words(@post.created_at) %> ago</h3>
 <div>
     <%= @post.body %>
 </div>
@@ -8,3 +8,14 @@
     <li><%= link_to "New Post", new_post_path %></li>
     <li><%= link_to "Edit Post", edit_post_path(@post.id) %></li>
 </ul>
+
+<ul class="hlist">
+    <% if @newer %>
+        <li><%= link_to truncate(@newer.title, :length => 20), @newer %></li>
+    <% end %>
+
+    <% if @older %>
+        <li><%= link_to truncate(@older.title, :length => 20), @older %></li>
+    <% end %>
+</ul>
+

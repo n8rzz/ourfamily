@@ -1,5 +1,7 @@
-<h1 class="hdg hdg_2">Edit Post</h1>
+<h2 class="hdg hdg_2">Edit Post</h2>
 <%= form_for(@post) do |f| %>
+    <%= render 'shared/error_messages', object: @post %>
+
     <ul>
         <li>
             <%= f.label :title, :class => 'input-label' %>
@@ -10,7 +12,7 @@
             <%= f.text_area :body, :class => 'input-textarea' %>
         </li>
         <li>
-            <%= f.submit "Add New Post", :class => 'btn btn-sm' %>
+            <%= f.submit "Update Post", :class => 'btn btn-sm' %>
         </li>
     </ul>
 <% end %>
