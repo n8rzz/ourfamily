@@ -10,6 +10,7 @@ describe "posts/new.html.erb", type: :view do
     it { should have_selector('#post_title') }
     it { should have_selector('#post_body') }
     it { should have_selector('input[type="submit"]') }
+    it { should have_selector('input[type="file"]') }
     it { should have_selector('input[value="Add New Post"]') }
 
     describe "invalid information" do

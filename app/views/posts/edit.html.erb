@@ -12,7 +12,11 @@
             <%= f.text_area :body, :class => 'input-textarea' %>
         </li>
         <li>
-            <%= f.submit "Update Post", :class => 'btn btn-sm' %>
+            <%= f.label :photo, "Photo" %>
+            <%= f.file_field :photo %>
+        </li>
+        <li>
+            <%= f.submit "Update Post", :class => 'btn' %>
         </li>
     </ul>
 <% end %>

@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth', '~> 1.2.2'
 gem 'populator', '~> 1.0.0'
+gem "paperclip", "~> 4.3"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -10,6 +10,7 @@ describe "posts/edit.html.erb", type: :view do
     it { should have_css('h2', text: 'Edit Post') }
     it { should have_selector('#post_title') }
     it { should have_selector('#post_body') }
+    it { should have_selector('input[type="file"]') }
     it { should have_selector('input[type="submit"]') }
     it { should have_selector('input[value="Update Post"]') }
 
