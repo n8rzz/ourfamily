@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Post, type: :model do
     it 'has a valid factroy' do
         expect(build(:post)).to be_instance_of(Post)
-      end
+    end
 
     describe 'data and associations' do
         it { should have_db_column(:title) }
@@ -20,6 +20,11 @@ describe Post, type: :model do
     it { should respond_to(:title) }
     it { should respond_to(:body) }
     it { should respond_to(:published) }
+    it { should have_attached_file(:photo) }
+    it { should validate_attachment_content_type(:photo).
+        allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg').
+        rejecting('text/plain', 'text/xml') }
+    it { should validate_attachment_size(:photo).less_than(10.megabytes) }
     it { should be_valid }
 
     describe "when title is not present" do

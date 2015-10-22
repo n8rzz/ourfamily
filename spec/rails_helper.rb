@@ -7,6 +7,7 @@ require 'shoulda/matchers'
 require "capybara/rails"
 # require 'capybara/rspec'
 require "capybara/rspec/matchers"
+require 'paperclip/matchers'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -56,6 +57,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Capybara::DSL
   # config.include Capybara::RspecMathcers
+  config.include Paperclip::Shoulda::Matchers
 
 
 
