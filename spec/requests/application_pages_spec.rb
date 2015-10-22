@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe "Application Pages" do
+describe 'Application Pages' do
   subject { page }
 
   before do
-      visit root_path
+    visit root_path
   end
 
   it { should have_selector('div.wrapper') }

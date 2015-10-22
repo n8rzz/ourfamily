@@ -1,38 +1,38 @@
 require 'rails_helper'
 
-describe "posts/edit.html.erb", type: :view do
-    let(:post) { create(:post) }
-    subject { page }
+describe 'posts/edit.html.erb', type: :view do
+  let(:post) { create(:post) }
+  subject { page }
 
-    before { visit edit_post_path(post) }
+  before { visit edit_post_path(post) }
 
-    it { should render_template(:edit) }
-    it { should have_css('h2', text: 'Edit Post') }
-    it { should have_selector('#post_title') }
-    it { should have_selector('#post_body') }
-    it { should have_selector('input[type="file"]') }
-    it { should have_selector('input[type="submit"]') }
-    it { should have_selector('input[value="Update Post"]') }
+  it { should render_template(:edit) }
+  it { should have_css('h2', text: 'Edit Post') }
+  it { should have_selector('#post_title') }
+  it { should have_selector('#post_body') }
+  it { should have_selector('input[type="file"]') }
+  it { should have_selector('input[type="submit"]') }
+  it { should have_selector('input[value="Update Post"]') }
 
-    describe "with invalid title" do
-        let(:new_title) { '' }
+  describe 'with invalid title' do
+    let(:new_title) { '' }
 
-        before do
-            fill_in 'Title', with: new_title
-            click_button "Update Post"
-        end
-
-        it { should have_content('error') }
+    before do
+      fill_in 'Title', with: new_title
+      click_button 'Update Post'
     end
 
-    describe "with invalid title" do
-        let(:new_body) { '' }
+    it { should have_content('error') }
+  end
 
-        before do
-            fill_in 'Body', with: new_body
-            click_button "Update Post"
-        end
+  describe 'with invalid title' do
+    let(:new_body) { '' }
 
-        it { should have_content('error') }
+    before do
+      fill_in 'Body', with: new_body
+      click_button 'Update Post'
     end
+
+    it { should have_content('error') }
+  end
 end
