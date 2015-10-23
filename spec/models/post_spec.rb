@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Post, type: :model do
-  it 'has a valid factroy' do
+  it 'has a valid factory' do
     expect(build(:post)).to be_instance_of(Post)
   end
 

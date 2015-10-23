@@ -9,5 +9,9 @@ namespace :db do
                          created_at: n.days.ago
             )
         end
+
+        # 2.times do |n|
+        #     Family.create!(subdomain: Faker::Name.last_name)
+        # end
     end
 end
