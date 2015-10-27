@@ -25,11 +25,11 @@ describe Post, type: :model do
   it { should be_valid }
 
   describe 'post image attachment' do
-    it {
+    it do
       should validate_attachment_content_type(:photo)
         .allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg')
         .rejecting('text/plain', 'text/xml')
-    }
+    end
     it { should validate_attachment_size(:photo).less_than(10.megabytes) }
   end
 
