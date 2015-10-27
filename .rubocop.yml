@@ -4,10 +4,12 @@ AllCops:
     - Rakefile
     - config.ru
   Exclude:
+    - bin/**/*
+    - config/initializers/devise.rb
+    - db/migrate/**/*
     - db/schema.rb
     - src/**/*
     - node_modules/**/*
-    - bin/**/*
 Documentation:
   Enabled: false
 Metrics/LineLength:
