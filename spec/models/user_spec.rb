@@ -11,5 +11,6 @@ describe User, type: :model do
     it { should have_db_column(:updated_at) }
     it { should have_db_column(:current_sign_in_at) }
     it { should have_db_column(:last_sign_in_at) }
+    it { should have_many(:posts).dependent(:destroy) }
   end
 end
