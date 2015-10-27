@@ -1,7 +1,13 @@
 require 'rails_helper'
 
 describe 'posts/show.html.erb', type: :view do
+  let(:user) { create(:user) }
+
   subject { page }
+
+  before(:each) do
+    sign_in(user)
+  end
 
   describe 'show' do
     let(:post) { create(:post, id: 2, created_at: 4.days.ago) }

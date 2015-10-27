@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 describe 'posts/index.html.erb', type: :view do
+  let(:user) { create(:user) }
+
   before(:each) do
+    sign_in(user)
     10.times do |n|
       FactoryGirl.create(:post, id: n)
     end
