@@ -6,5 +6,5 @@ def sign_in(user)
   fill_in "Password", with: user.password
   click_button "Log in"
   # Sign in when not using Capybara.
-  cookies[:remember_token] = user.remember_token
+  # cookies[:remember_token] = user.remember_token
 end
