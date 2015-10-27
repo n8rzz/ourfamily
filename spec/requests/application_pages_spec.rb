@@ -14,5 +14,5 @@ describe 'Application Pages' do
   it { should have_selector('div.page-ft') }
   it { should have_css('a', text: 'Register') }
   it { should have_css('a', text: 'Login') }
-  it { should have_css('a', text: 'Logout') }
+  it { should have_selector('input[type=submit][value="Logout"]') }
 end
