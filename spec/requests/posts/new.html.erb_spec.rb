@@ -5,7 +5,7 @@ describe 'posts/new.html.erb', type: :view do
 
   subject { page }
 
-  before(:each) do
+  before :each do
     sign_in(user)
     visit new_post_path
   end
