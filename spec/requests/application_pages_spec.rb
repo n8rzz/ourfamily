@@ -27,5 +27,4 @@ describe 'Application Pages' do
     it { should_not have_css('a', text: 'Register') }
     it { should_not have_css('a', text: 'Login') }
   end
-
 end

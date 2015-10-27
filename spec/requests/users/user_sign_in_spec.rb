@@ -14,8 +14,8 @@ describe 'user login' do
     let(:user) { create(:user) }
 
     before do
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => user.password
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: user.password
       click_button 'Log in'
     end
 

@@ -12,9 +12,9 @@ describe 'user registration' do
 
   describe 'allows new users to register' do
     before do
-      fill_in 'Email', :with => 'jimbob@bobstires.com'
-      fill_in 'Password', :with => 'password'
-      fill_in 'Password confirmation', :with => 'password'
+      fill_in 'Email', with: 'jimbob@bobstires.com'
+      fill_in 'Password', with: 'password'
+      fill_in 'Password confirmation', with: 'password'
 
       click_button 'Sign up'
     end
