@@ -20,7 +20,7 @@ describe 'posts/show.html.erb', type: :view do
     it { should have_css('h1', text: 'OurFamily') }
     it { should have_css('h2', text: post.title) }
     it { should have_css('h3', text: time_ago_in_words(post.created_at)) }
-    it { should have_css('div', text: '{AUTHOR}') }
+    it { should have_css('div', text: post.user.email) }
     it { should have_css('div', text: post.body) }
     it { should have_css('a', text: 'New Post') }
     it { should have_css('a', text: 'Edit Post') }

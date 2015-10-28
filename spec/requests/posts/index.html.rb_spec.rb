@@ -2,14 +2,13 @@ require 'rails_helper'
 
 describe 'posts/index.html.erb', type: :view do
   let(:user) { create(:user) }
+  let(:post) { create(:post, id: 2, created_at: 4.days.ago, user_id: user.id) }
+  let!(:older_post) { create(:post, id: 3, created_at: 8.days.ago, user_id: user.id) }
+  let!(:newer_post) { create(:post, id: 1, created_at: 2.days.ago, user_id: user.id) }
 
   subject { page }
 
-  before :each do
-    10.times do |n|
-      FactoryGirl.create(:post, id: n)
-    end
-
+  before do
     sign_in(user)
     visit posts_path
   end
@@ -19,5 +18,5 @@ describe 'posts/index.html.erb', type: :view do
   it { should have_css('h2', text: 'Recent Posts') }
   it { should have_selector('ul.vlist') }
   it { should have_css('div', text: 'ago') }
-  it { should have_css('div', text: '{AUTHOR}') }
+  it { should have_css('div', text: post.user.email) }
 end
