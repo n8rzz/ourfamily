@@ -19,4 +19,5 @@ describe 'posts/index.html.erb', type: :view do
   it { should have_selector('ul.vlist') }
   it { should have_css('div', text: 'ago') }
   it { should have_css('div', text: post.user.email) }
+  it { should have_css('div', text: '{EDIT}') }
 end

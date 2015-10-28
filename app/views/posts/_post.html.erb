@@ -9,7 +9,9 @@
             <%= post.body %>
         </div>
         <div class="excerpt-ft">
-
+            <% if user_signed_in? %>
+                <div>{EDIT}</div>
+            <% end %>
         </div>
     </div>
 </li>
