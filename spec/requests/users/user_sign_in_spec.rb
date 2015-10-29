@@ -4,7 +4,7 @@ describe 'user login' do
   subject { page }
 
   before do
-    visit '/users/sign_in'
+    visit new_user_session_path
   end
 
   it { should have_css('h2', text: 'Log in') }
