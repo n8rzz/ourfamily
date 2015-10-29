@@ -3,12 +3,7 @@ require 'rails_helper'
 describe 'user registration' do
   subject { page }
 
-  before do
-    visit '/users/sign_up'
-  end
-
-  it { should have_css('h2', text: 'Create a new account') }
-  it { should have_selector('h2.hdg') }
+  before { visit new_user_registration_path }
 
   describe 'allows new users to register' do
     before do
