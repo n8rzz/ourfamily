@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Post, type: :model do
-  it 'has a valid factroy' do
+  it 'has a valid factory' do
     expect(build(:post)).to be_instance_of(Post)
   end
 
@@ -9,6 +9,7 @@ describe Post, type: :model do
     it { should have_db_column(:title) }
     it { should have_db_column(:body) }
     it { should have_db_column(:published) }
+    it { should belong_to(:user) }
   end
 
   before do
@@ -24,11 +25,11 @@ describe Post, type: :model do
   it { should be_valid }
 
   describe 'post image attachment' do
-    it {
+    it do
       should validate_attachment_content_type(:photo)
         .allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg')
         .rejecting('text/plain', 'text/xml')
-    }
+    end
     it { should validate_attachment_size(:photo).less_than(10.megabytes) }
   end
 

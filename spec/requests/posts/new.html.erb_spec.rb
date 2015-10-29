@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 describe 'posts/new.html.erb', type: :view do
+  let(:user) { create(:user) }
+
   subject { page }
 
-  before { visit new_post_path }
+  before :each do
+    sign_in(user)
+    visit new_post_path
+  end
 
   it { should render_template(:new) }
   it { should have_css('h2', text: 'New Post') }
