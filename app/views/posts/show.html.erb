@@ -1,5 +1,6 @@
 <h2 class="hdg"><%= @post.title %></h2>
 <h3 class="hdg"><%= time_ago_in_words(@post.created_at) %> ago</h3>
+<div><%= @post.user.email %></div>
 <div>
     <% if @post.photo.exists? %>
         <%= image_tag @post.photo.url %>
@@ -23,3 +24,4 @@
     <% end %>
 </ul>
 
+<%= debug @post %>
