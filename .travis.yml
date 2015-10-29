@@ -12,4 +12,5 @@ script:
 # whitelist
 branches:
   only:
-    - feature/travis
+    - develop
+    - master
