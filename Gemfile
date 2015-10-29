@@ -10,24 +10,23 @@ gem 'omniauth', '~> 1.2.2'
 gem 'populator', '~> 1.0.0'
 gem "paperclip", "~> 4.3"
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
 group :development, :test do
   gem 'rspec-rails', '3.2.1'
   gem 'capybara', '~> 2.4.4'
   gem 'byebug'
-  gem 'spring'
   gem 'faker', '~> 1.5.0'
   gem 'better_errors', '~>2.1.1'
   gem 'database_cleaner'
   gem 'rubocop', require: false
+  gem 'guard-bundler', '2.1.0'
+  gem 'guard-rspec', '4.5.0', require: false
+  gem 'guard-rubocop', '1.2.0', require: false
+  gem 'guard-livereload', '2.5.1', require: false
 end
 
 group :test do
   gem 'factory_girl_rails', '4.4.1'
   gem 'shoulda-matchers', '2.8.0'
-  gem 'guard-rspec', '4.5.0', require: false
 end
 
 group :production do
