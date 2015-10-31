@@ -3,23 +3,6 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
   let(:user) { create(:user) }
 
-  describe 'GET #index' do
-    it 'populates an array of posts' do
-      post = build(:post)
-      get :index
-      expect(post).to be_instance_of(Post)
-    end
-
-    describe 'renders the :index view' do
-      before do
-        sign_in(user)
-        visit posts_path
-      end
-
-      it { should render_template('layouts/application') }
-    end
-  end
-
   describe 'GET #show' do
     let(:post) { create(:post) }
 
