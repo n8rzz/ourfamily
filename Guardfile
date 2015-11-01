@@ -90,6 +90,7 @@ group :red_green_refactor, halt_on_fail: true do
     watch(%r{^app/(.+)\.rb$})
     watch(%r{^app/controllers/(.+)_(controller)\.rb$})
     watch(%r{^spec/(.+)\.rb$})
+    watch(%r{^lib/(.*)\.rake$})
     watch('config/routes.rb')
     watch('app/controllers/application_controller.rb')
     watch('spec/rails_helper.rb')

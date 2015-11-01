@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :correct_user, only: :destroy
-
-  def index
-    @posts = Post.all
-  end
 
   def show
     @post = Post.find(params[:id])

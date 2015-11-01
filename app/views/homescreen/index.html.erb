@@ -1,0 +1,11 @@
+<h2 class="hdg hdg_2">Recent Posts</h2>
+<ul class="vlist">
+    <%= render @posts %>
+</ul>
+
+<h2 class="hdg">Member Activity</h2>
+<ol>
+    <% @users.each_with_index do |user| %>
+     <%= render partial: 'homescreen/user', object: user %>
+    <% end %>
+</ol>
