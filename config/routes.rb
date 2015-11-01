@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   # TODO: index route needs to be removed completely once static_pages controller is built
   resources :posts, except: :index
+  get 'static_pages/index'
 end
