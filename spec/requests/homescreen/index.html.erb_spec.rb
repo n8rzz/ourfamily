@@ -7,15 +7,34 @@ describe 'homescreen#index.html.erb', type: :view do
   subject { page }
 
   before do
-    sign_in(user)
+    # sign_in(user)
     visit root_path
   end
 
-  it { should render_template(:index) }
   it { should have_css('h1', text: 'OurFamily') }
-  it { should have_css('h2', text: 'Recent Posts') }
-  it { should have_selector('ul.vlist') }
-  # it { should have_css('div', text: 'ago') }
-  # it { should have_css('div', text: post.user.email) }
-  # it { should have_css('div', text: '{EDIT}') }
+
+  describe 'when not signed in' do
+    # it { should redirect_to('/users/sign_in') }
+    it { should have_css('a', text: 'Register') }
+    it { should have_css('a', text: 'Login') }
+    it { should_not have_css('a', text: 'Profile') }
+    it { should_not have_selector('input[type=submit][value="Logout"]') }
+    it { should_not have_content('Recent Posts') }
+  end
+
+  describe 'when signed in' do
+    let(:user) { create(:user) }
+    before { sign_in(user) }
+
+    it { should_not have_css('a', text: 'Register') }
+    it { should_not have_css('a', text: 'Login') }
+    it { should have_css('a', text: 'Profile') }
+    it { should have_selector('input[type=submit][value="Logout"]') }
+    it { should have_content('Recent Posts') }
+    it { should have_css('h2', text: 'Recent Posts') }
+    it { should have_selector('ul.vlist') }
+    # it { should have_css('div', text: 'ago') }
+    # it { should have_css('div', text: post.user.email) }
+    # it { should have_css('div', text: '{EDIT}') }
+  end
 end

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :correct_user, only: :destroy
 
   def show
