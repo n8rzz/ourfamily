@@ -1,12 +1,10 @@
 require 'rails_helper'
 
-describe HomescreenController, type: :controller do
+describe StaticPagesController, type: :controller do
   subject { page }
+  before { visit root_path }
 
   describe 'GET #index' do
-    let(:user) { create(:user) }
-    before { sign_in(user) }
-
     it 'returns http success' do
       get :index
       expect(response).to have_http_status(:success)
