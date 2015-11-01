@@ -8,7 +8,7 @@ describe 'homescreen#index.html.erb', type: :view do
 
   before do
     # sign_in(user)
-    visit root_path
+    visit home_path
   end
 
   it { should have_css('h1', text: 'OurFamily') }

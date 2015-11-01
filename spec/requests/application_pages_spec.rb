@@ -19,7 +19,6 @@ describe 'Application Pages' do
     it { should have_css('a', text: 'Login') }
     it { should_not have_css('a', text: 'Profile') }
     it { should_not have_selector('input[type=submit][value="Logout"]') }
-    it { should_not have_content('Recent Posts') }
   end
 
   describe 'when signed in' do
@@ -30,6 +29,5 @@ describe 'Application Pages' do
     it { should_not have_css('a', text: 'Login') }
     it { should have_css('a', text: 'Profile') }
     it { should have_selector('input[type=submit][value="Logout"]') }
-    it { should have_content('Recent Posts') }
   end
 end
