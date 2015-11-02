@@ -1,11 +1,18 @@
-<h2 class="hdg hdg_2">Recent Posts</h2>
-<ul class="vlist">
-    <%= render @posts %>
-</ul>
+<div class="grid">
+  <div class="grid-col grid-col_8of12">
+    <h2 class="hdg hdg_2">Recent Posts</h2>
+    <ul class="vlist">
+        <%= render @posts %>
+    </ul>
+  </div>
+  <div class="grid-col grid-col_4of12">
+    <h2 class="hdg">Member Activity</h2>
+    <ol>
+        <% @users.each_with_index do |user| %>
+        <%= render partial: 'homescreen/user', object: user %>
+        <% end %>
+    </ol>
+  </div>
+</div>
 
-<h2 class="hdg">Member Activity</h2>
-<ol>
-    <% @users.each_with_index do |user| %>
-     <%= render partial: 'homescreen/user', object: user %>
-    <% end %>
-</ol>
+
