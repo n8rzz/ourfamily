@@ -4,6 +4,7 @@
 /* ---------------------------------------------------------------------
 RESET CSS (thanks Eric Meyer)
 ------------------------------------------------------------------------ */
+@import url(https://fonts.googleapis.com/css?family=Raleway|Lora:400,700|Indie+Flower);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -90,9 +91,6 @@ textarea {
   border: 0;
   padding: 0; }
 
-/* ---------------------------------------------------------------------
-    Variables
---------------------------------------------------------------------- */
 /* Colors */
 /* Misc Colors */
 .util-isHidden {
@@ -140,6 +138,11 @@ img {
   max-width: 100%; }
 
 @media only screen and (max-width: 328px) {
+  .page {
+    font-size: 16px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.2; }
   /*doc
 ---
 title: Alert
@@ -501,38 +504,26 @@ category: Base
     margin-right: 100%; } }
 
 @media only screen and (max-width: 328px) {
-  /*doc
----
-title: Headings
-name: headings
-category: Typography
----
-
-```html_example
-<h1 class="hdg hdg_1">hdg 1</h1>
-<h2 class="hdg hdg_2">hdg 2</h2>
-<h3 class="hdg hdg_3">hdg 3</h3>
-<h4 class="hdg hdg_4">hdg 4</h4>
-<h5 class="hdg hdg_5">hdg 5</h5>
-```
-*/
-  /* ---------------------------------------------------------------------
- Headings
------------------------------------------------------------------------- */
   .hdg {
-    font-family: Georgia, Times, "Times New Roman", serif;
+    font-family: "Lora", "Georgia" serif;
     font-weight: normal;
     line-height: 1.2; }
+  .hdg > a {
+    text-decoration: inherit;
+    color: inerit; }
   .hdg_1 {
     font-size: 26px; }
   .hdg_2 {
     font-size: 22px; }
   .hdg_3 {
-    font-size: 20px; }
+    font-size: 20px;
+    font-weight: 500; }
   .hdg_4 {
     font-size: 16px; }
   .hdg_5 {
     font-size: 12px; }
+  .mix-hdg_sans {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .mix-hdg_caps {
     text-transform: uppercase; }
   .mix-hdg_blue {
@@ -903,6 +894,11 @@ Page body elements are wrapped with a wrapper div
     padding: 20px; } }
 
 @media only screen and (min-width: 328px) {
+  .page {
+    font-size: 16px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.2; }
   /*doc
 ---
 title: Alert
@@ -1264,38 +1260,26 @@ category: Base
     margin-right: 100%; } }
 
 @media only screen and (min-width: 328px) {
-  /*doc
----
-title: Headings
-name: headings
-category: Typography
----
-
-```html_example
-<h1 class="hdg hdg_1">hdg 1</h1>
-<h2 class="hdg hdg_2">hdg 2</h2>
-<h3 class="hdg hdg_3">hdg 3</h3>
-<h4 class="hdg hdg_4">hdg 4</h4>
-<h5 class="hdg hdg_5">hdg 5</h5>
-```
-*/
-  /* ---------------------------------------------------------------------
- Headings
------------------------------------------------------------------------- */
   .hdg {
-    font-family: Georgia, Times, "Times New Roman", serif;
+    font-family: "Lora", "Georgia" serif;
     font-weight: normal;
     line-height: 1.2; }
+  .hdg > a {
+    text-decoration: inherit;
+    color: inerit; }
   .hdg_1 {
     font-size: 26px; }
   .hdg_2 {
     font-size: 22px; }
   .hdg_3 {
-    font-size: 20px; }
+    font-size: 20px;
+    font-weight: 500; }
   .hdg_4 {
     font-size: 16px; }
   .hdg_5 {
     font-size: 12px; }
+  .mix-hdg_sans {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .mix-hdg_caps {
     text-transform: uppercase; }
   .mix-hdg_blue {

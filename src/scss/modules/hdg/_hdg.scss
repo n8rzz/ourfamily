@@ -1,25 +1,15 @@
-/*doc
----
-title: Headings
-name: headings
-category: Typography
----
-
-```html_example
-<h1 class="hdg hdg_1">hdg 1</h1>
-<h2 class="hdg hdg_2">hdg 2</h2>
-<h3 class="hdg hdg_3">hdg 3</h3>
-<h4 class="hdg hdg_4">hdg 4</h4>
-<h5 class="hdg hdg_5">hdg 5</h5>
-```
-*/
-/* ---------------------------------------------------------------------
- Headings
------------------------------------------------------------------------- */
+// ---------------------------------------------------------------------
+// Headings
+// ---------------------------------------------------------------------
 .hdg {
-    font-family: Georgia, Times, "Times New Roman", serif;
+    font-family: $FONT_SERIF;
     font-weight: normal;
     line-height: 1.2;
+}
+
+.hdg > a {
+    text-decoration: inherit;
+    color: inerit;
 }
 
 .hdg_1 {
@@ -30,6 +20,7 @@ category: Typography
 }
 .hdg_3 {
     font-size: $BASE_FONT_SIZE + 4px;
+    font-weight: 500;
 }
 .hdg_4 {
     font-size: $BASE_FONT_SIZE;
@@ -39,7 +30,7 @@ category: Typography
 }
 
 .mix-hdg_sans {
-
+    font-family: $FONT;
 }
 
 .mix-hdg_caps {
