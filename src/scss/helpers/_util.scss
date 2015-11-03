@@ -76,9 +76,9 @@
 // Visibility
 // ------------------------------------------------------------------------
 @media screen and (min-width: ($SCREEN_WIDTH_MD + 1px)) {
-    .util-isHiddenMD { display: none !important; }
+    .u-isHiddenMD { display: none !important; }
 }
 
 @media screen and (max-width: $SCREEN_WIDTH_MD) {
-    .util-isHiddenSM { display: none !important; }
+    .u-isHiddenSM { display: none !important; }
 }
