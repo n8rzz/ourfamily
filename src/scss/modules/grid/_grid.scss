@@ -26,14 +26,14 @@
   // margin-left: 2.127663%;
 }
 
-@media only screen and (min-width: 0px) {
-  @import '_grid_sm';
-}
-
-@media only screen and (min-width: $SCREEN_WIDTH_SM) {
-  @import '_grid_md';
+@media only screen and (min-width: $SCREEN_WIDTH_LG) {
+  @import '_grid_lg';
 }
 
 @media only screen and (min-width: $SCREEN_WIDTH_MD) {
-  @import '_grid_lg';
+  @import '_grid_md';
+}
+
+@media only screen and (min-width: 0px) {
+  @import '_grid_sm';
 }

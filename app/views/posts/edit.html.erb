@@ -1,22 +1,26 @@
-<h2 class="hdg hdg_2">Edit Post</h2>
-<%= form_for(@post) do |f| %>
-    <%= render 'shared/error_messages', object: @post %>
+<div class="grid">
+  <div class="grid-col grid-col-sm_6of6">
+    <h2 class="hdg hdg_2">Edit Post</h2>
+    <%= form_for(@post) do |f| %>
+        <%= render 'shared/error_messages', object: @post %>
 
-    <ul>
-        <li>
-            <%= f.label :title, :class => 'input-label' %>
-            <%= f.text_field :title, :class => 'input' %>
-        </li>
-        <li>
-            <%= f.label :body, :class => 'input-label' %>
-            <%= f.text_area :body, :class => 'input-textarea' %>
-        </li>
-        <li>
-            <%= f.label :photo, "Photo" %>
-            <%= f.file_field :photo %>
-        </li>
-        <li>
-            <%= f.submit "Update Post", :class => 'btn' %>
-        </li>
-    </ul>
-<% end %>
+        <ul>
+            <li>
+                <%= f.label :title, :class => 'input-label' %>
+                <%= f.text_field :title, :class => 'input' %>
+            </li>
+            <li>
+                <%= f.label :body, :class => 'input-label' %>
+                <%= f.text_area :body, :class => 'input-textarea' %>
+            </li>
+            <li>
+                <%= f.label :photo, "Photo" %>
+                <%= f.file_field :photo %>
+            </li>
+            <li>
+                <%= f.submit "Update Post", :class => 'btn' %>
+            </li>
+        </ul>
+      <% end %>
+  </div>
+</div>
