@@ -1,17 +1,17 @@
 <div class="grid">
-  <div class="grid-col grid-col_8of12">
-    <h2 class="hdg hdg_2">Recent Posts</h2>
-    <ul class="vlist">
-        <%= render @posts %>
-    </ul>
-  </div>
-  <div class="grid-col grid-col_4of12">
+  <div class="grid-col grid-col-pull grid-col-md_6of6 grid-col-lg_2of6">
     <h2 class="hdg">Member Activity</h2>
     <ol>
         <% @users.each_with_index do |user| %>
         <%= render partial: 'homescreen/user', object: user %>
         <% end %>
     </ol>
+  </div>
+  <div class="grid-col grid-col-md_6of6 grid-col-lg_4of6">
+    <h2 class="hdg hdg_2">Recent Posts</h2>
+    <ul class="vlist">
+        <%= render @posts %>
+    </ul>
   </div>
 </div>
 
