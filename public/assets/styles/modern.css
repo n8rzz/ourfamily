@@ -132,6 +132,8 @@ textarea {
 *:before {
   margin: 0;
   padding: 0;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box; }
 
 img {
@@ -244,59 +246,26 @@ See Media section for additional usage of the box module
     border: 1px solid #3071a9; }
   .box-hd {
     margin-bottom: 20px; }
-  /*doc
----
-title: Buttons
-name: buttons
-category: Base
----
-
-```html_example
-<div>
-    <a href="#" class="btn">Primary Button</a>
-    <a href="#" class="btn btn_disabled">Disabled Button</a>
-    <a href="#" class="btn btn_cta">Call to Action</a>
-    <a href="#" class="btn btn_block" role="button">Link button</a>
-</div>
-<div>
-    <input type="submit" class="btn" value="Primary Button" />
-    <input type="submit" class="btn btn_disabled" value="Disabled Button" disabled />
-    <input type="submit" class="btn btn_cta" value="Call to Action" />
-    <input type="submit" class="btn btn_block" value="Block" />
-</div>
-<div>
-    <button type="submit" class="btn">Primary Button</button>
-    <button type="submit" class="btn btn_disabled" disabled>Disabled Button</button>
-    <button type="submit" class="btn btn_cta">Call to Action</button>
-    <button type="submit" class="btn btn_block">Button button</button>
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Buttons
------------------------------------------------------------------------- */
   .btn {
     display: inline-block;
     margin: 0;
     padding: 8px 16px;
     border: 0;
-    -ms-box-sizing: content-box;
-    -o-box-sizing: content-box;
-    box-sizing: content-box;
     background: #666666;
     color: #eeeeee;
     /* fallback for non rgba browsers */
     color: rgba(255, 255, 255, 0.9);
-    font-weight: bold;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: normal;
     /* set to normal to .btn can be usd on inputs in firefox with consistency */
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     cursor: pointer;
-    border-radius: 16px;
+    border-radius: 6px;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
     transition: all 0.12s ease-in-out; }
   .btn:hover {
     background: #333333; }
@@ -829,28 +798,10 @@ category: Navigation
     margin-bottom: 16px; }
   .vr_x6 {
     margin-bottom: 24px; }
-  /*doc
----
-title: Wrapper
-name: wrapper
-category: Layout
----
-
-Page body elements are wrapped with a wrapper div
-
-```html_example
-<div class="wrapper">
-<!-- page contents here -->
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Wrapper
------------------------------------------------------------------------- */
   .wrapper {
     padding: 20px; } }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 0) {
   .page {
     font-size: 16px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -957,59 +908,26 @@ See Media section for additional usage of the box module
     border: 1px solid #3071a9; }
   .box-hd {
     margin-bottom: 20px; }
-  /*doc
----
-title: Buttons
-name: buttons
-category: Base
----
-
-```html_example
-<div>
-    <a href="#" class="btn">Primary Button</a>
-    <a href="#" class="btn btn_disabled">Disabled Button</a>
-    <a href="#" class="btn btn_cta">Call to Action</a>
-    <a href="#" class="btn btn_block" role="button">Link button</a>
-</div>
-<div>
-    <input type="submit" class="btn" value="Primary Button" />
-    <input type="submit" class="btn btn_disabled" value="Disabled Button" disabled />
-    <input type="submit" class="btn btn_cta" value="Call to Action" />
-    <input type="submit" class="btn btn_block" value="Block" />
-</div>
-<div>
-    <button type="submit" class="btn">Primary Button</button>
-    <button type="submit" class="btn btn_disabled" disabled>Disabled Button</button>
-    <button type="submit" class="btn btn_cta">Call to Action</button>
-    <button type="submit" class="btn btn_block">Button button</button>
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Buttons
------------------------------------------------------------------------- */
   .btn {
     display: inline-block;
     margin: 0;
     padding: 8px 16px;
     border: 0;
-    -ms-box-sizing: content-box;
-    -o-box-sizing: content-box;
-    box-sizing: content-box;
     background: #666666;
     color: #eeeeee;
     /* fallback for non rgba browsers */
     color: rgba(255, 255, 255, 0.9);
-    font-weight: bold;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: normal;
     /* set to normal to .btn can be usd on inputs in firefox with consistency */
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     cursor: pointer;
-    border-radius: 16px;
+    border-radius: 6px;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
     transition: all 0.12s ease-in-out; }
   .btn:hover {
     background: #333333; }
@@ -1062,7 +980,7 @@ category: Base
   .grid-col-pull {
     float: right; } }
 
-@media only screen and (max-width: 767px) and (min-width: 0px) {
+@media only screen and (max-width: 767px) and (min-width: 0) and (min-width: 0px) {
   .grid-col-sm_1of6 {
     width: 16.66667%; }
   .mix-grid-col-sm_push1of6 {
@@ -1100,7 +1018,7 @@ category: Base
   .mix-grid-col-sm_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (max-width: 767px) and (min-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 0) and (min-width: 767px) {
   .grid-col-md_1of6 {
     width: 16.66667%; }
   .mix-grid-col-md_push1of6 {
@@ -1138,7 +1056,7 @@ category: Base
   .mix-grid-col-md_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (max-width: 767px) and (min-width: 1027px) {
+@media only screen and (max-width: 767px) and (min-width: 0) and (min-width: 1027px) {
   .grid-col-lg_1of6 {
     width: 16.66667%; }
   .mix-grid-col-lg_push1of6 {
@@ -1176,7 +1094,7 @@ category: Base
   .mix-grid-col-lg_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 0) {
   .hdg {
     font-family: "Lora", "Georgia" serif;
     font-weight: normal;
@@ -1542,26 +1460,10 @@ category: Navigation
     margin-bottom: 16px; }
   .vr_x6 {
     margin-bottom: 24px; }
-  /*doc
----
-title: Wrapper
-name: wrapper
-category: Layout
----
-
-Page body elements are wrapped with a wrapper div
-
-```html_example
-<div class="wrapper">
-<!-- page contents here -->
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Wrapper
------------------------------------------------------------------------- */
   .wrapper {
     padding: 20px; }
   .input {
     width: 100%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .wrapper {
+    padding: 10px; } }

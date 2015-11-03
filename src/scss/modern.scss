@@ -11,7 +11,7 @@
   @import "_screen_md";
 }
 
-@media only screen and (max-width: $SCREEN_WIDTH_MD) {
+@media only screen and (max-width: $SCREEN_WIDTH_MD) and (min-width: 0) {
   @import "_screen_md";
   @import "_screen_sm";
 }
