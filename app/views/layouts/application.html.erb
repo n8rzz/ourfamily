@@ -17,29 +17,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="page">
 
-    <div class="wrapper">
-        <div class="page">
+      <%= render 'layouts/header' %>
 
-            <%= render 'layouts/header' %>
-
-            <div class="page-bd">
-                <div class="wrapper">
-                    <% flash.each do |message_type, message| %>
-                      <div class="alert alert-<%= message_type %>">
-                        <%= message %>
-                      </div>
-                    <% end %>
-
-
-                    <%= yield %>
+      <div class="page-bd">
+          <div class="wrapper">
+              <% flash.each do |message_type, message| %>
+                <div class="alert alert-<%= message_type %>">
+                  <%= message %>
                 </div>
-            </div>
+              <% end %>
 
-            <%= render 'layouts/footer' %>
+              <%= yield %>
 
-        </div>
-    </div>
+          </div>
+      </div>
+
+      <%= render 'layouts/footer' %>
+
+  </div>
 
   <%= debug(params) if Rails.env.development? %>
 

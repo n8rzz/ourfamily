@@ -1,17 +1,24 @@
 <div class="page-hd">
-    <h1 class="hdg hdg_1">
-        <%= link_to "OurFamily", root_path %>
-    </h1>
-
-    <ul class="hlist">
-        <% if user_signed_in? %>
-            <li><%= link_to "Posts", root_path %></li>
-            <li><%= link_to "New Post", new_post_path %></li>
-            <li><%= link_to "Profile", edit_user_registration_path %></li>
-            <li><%= button_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-        <% else %>
-            <li><%= link_to "Register", new_user_registration_path %></li>
-            <li><%= link_to "Login", user_session_path %></li>
-        <% end %>
-    </ul>
+  <div class="wrapper">
+    <div class="grid">
+      <div class="grid-col grid-col-sm_6of6 grid-col-md_3of6">
+        <h1 class="hdg hdg_1">
+          <%= link_to "OurFamily", home_path %>
+        </h1>
+      </div>
+      <div class="grid-col grid-col-sm_6of6 grid-col-md_3of6">
+        <ul class="hlist">
+          <% if user_signed_in? %>
+              <li><%= link_to "Posts", home_path %></li>
+              <li><%= link_to "New Post", new_post_path %></li>
+              <li><%= link_to "Profile", edit_user_registration_path %></li>
+              <li><%= button_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <% else %>
+              <li><%= link_to "Register", new_user_registration_path %></li>
+              <li><%= link_to "Login", user_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,12 +1,6 @@
 // ---------------------------------------------------------------------
-// Vertical list
+// Wrapper - Small
 // ---------------------------------------------------------------------
-.vlist {}
-
-.vlist > * {
-    padding: 10px 0;
-}
-
-.mix-vlist_divided > * + * {
-    border-top: 1px solid;
+.wrapper {
+    padding: 10px;
 }
