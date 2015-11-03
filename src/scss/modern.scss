@@ -7,11 +7,12 @@
 @import "helpers/_fonts";
 @import "base/_elements";
 
-@media only screen and (max-width: $SCREEN_WIDTH_SM) {
+@media only screen and (min-width: $SCREEN_WIDTH_MD) {
+  @import "_screen_md";
+}
+
+@media only screen and (max-width: $SCREEN_WIDTH_MD) {
   @import "_screen_md";
   @import "_screen_sm";
 }
 
-@media only screen and (min-width: $SCREEN_WIDTH_SM) {
-  @import "_screen_md";
-}

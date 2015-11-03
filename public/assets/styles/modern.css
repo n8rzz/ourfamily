@@ -137,7 +137,7 @@ textarea {
 img {
   max-width: 100%; }
 
-@media only screen and (max-width: 328px) {
+@media only screen and (min-width: 767px) {
   .page {
     font-size: 16px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -317,65 +317,25 @@ category: Base
   /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
-  /*doc
----
-title: Field
-name: field
-category: Base
----
-
-```html_example
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-sm"placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-md"placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-lg"placeholder="Default Text" />
-</div>
-```
-*/
-  /*doc
----
-title: Field Block
-parent: field
-name: field_block
-category: Base
----
-
-```html_example
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-sm mix-fieldInput_block" placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-md mix-fieldInput_block" placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-lg mix-fieldInput_block" placeholder="Default Text" />
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Form Inputs
------------------------------------------------------------------------- */
-  .fieldInput {
-    padding-left: 7px;
-    border-radius: 3px; }
-  .fieldInput-sm {
+  .input {
+    width: 500px;
+    max-width: 85%;
+    padding: 5px 10px;
+    border: 1px solid #222222;
+    border-radius: 2px; }
+  .input-sm {
     padding-top: 5px;
     padding-bottom: 5px; }
-  .fieldInput-md {
+  .input-md {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .fieldInput-lg {
+  .input-lg {
     padding-top: 15px;
     padding-bottom: 15px; }
-  .mix-fieldInput_block {
+  .input-textarea {
+    height: 160px;
+    resize: none; }
+  .mix-input_block {
     display: block;
     width: 95%; }
   .grid:before,
@@ -389,7 +349,7 @@ category: Base
   .grid-col-pull {
     float: right; } }
 
-@media only screen and (max-width: 328px) and (min-width: 0px) {
+@media only screen and (min-width: 767px) and (min-width: 0px) {
   .grid-col-sm_1of6 {
     width: 16.66667%; }
   .mix-grid-col-sm_push1of6 {
@@ -427,7 +387,7 @@ category: Base
   .mix-grid-col-sm_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (max-width: 328px) and (min-width: 767px) {
+@media only screen and (min-width: 767px) and (min-width: 767px) {
   .grid-col-md_1of6 {
     width: 16.66667%; }
   .mix-grid-col-md_push1of6 {
@@ -465,7 +425,7 @@ category: Base
   .mix-grid-col-md_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (max-width: 328px) and (min-width: 1027px) {
+@media only screen and (min-width: 767px) and (min-width: 1027px) {
   .grid-col-lg_1of6 {
     width: 16.66667%; }
   .mix-grid-col-lg_push1of6 {
@@ -503,7 +463,7 @@ category: Base
   .mix-grid-col-lg_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (max-width: 328px) {
+@media only screen and (min-width: 767px) {
   .hdg {
     font-family: "Lora", "Georgia" serif;
     font-weight: normal;
@@ -852,11 +812,8 @@ category: Navigation
     background-color: #fff;
     border-color: #ddd;
     border-radius: 3px 3px 0 0; }
-  /* ---------------------------------------------------------------------
- Vertical list
------------------------------------------------------------------------- */
   .vlist > * {
-    padding: 10px; }
+    padding: 10px 0; }
   .mix-vlist_divided > * + * {
     border-top: 1px solid; }
   /* ---------------------------------------------------------------------
@@ -893,7 +850,7 @@ Page body elements are wrapped with a wrapper div
   .wrapper {
     padding: 20px; } }
 
-@media only screen and (min-width: 328px) {
+@media only screen and (max-width: 767px) {
   .page {
     font-size: 16px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1073,65 +1030,25 @@ category: Base
   /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
-  /*doc
----
-title: Field
-name: field
-category: Base
----
-
-```html_example
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-sm"placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-md"placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-lg"placeholder="Default Text" />
-</div>
-```
-*/
-  /*doc
----
-title: Field Block
-parent: field
-name: field_block
-category: Base
----
-
-```html_example
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-sm mix-fieldInput_block" placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-md mix-fieldInput_block" placeholder="Default Text" />
-</div>
-
-<div class="vr vr_x4">
-    <input type="text" class="fieldInput fieldInput-lg mix-fieldInput_block" placeholder="Default Text" />
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Form Inputs
------------------------------------------------------------------------- */
-  .fieldInput {
-    padding-left: 7px;
-    border-radius: 3px; }
-  .fieldInput-sm {
+  .input {
+    width: 500px;
+    max-width: 85%;
+    padding: 5px 10px;
+    border: 1px solid #222222;
+    border-radius: 2px; }
+  .input-sm {
     padding-top: 5px;
     padding-bottom: 5px; }
-  .fieldInput-md {
+  .input-md {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .fieldInput-lg {
+  .input-lg {
     padding-top: 15px;
     padding-bottom: 15px; }
-  .mix-fieldInput_block {
+  .input-textarea {
+    height: 160px;
+    resize: none; }
+  .mix-input_block {
     display: block;
     width: 95%; }
   .grid:before,
@@ -1145,7 +1062,7 @@ category: Base
   .grid-col-pull {
     float: right; } }
 
-@media only screen and (min-width: 328px) and (min-width: 0px) {
+@media only screen and (max-width: 767px) and (min-width: 0px) {
   .grid-col-sm_1of6 {
     width: 16.66667%; }
   .mix-grid-col-sm_push1of6 {
@@ -1183,7 +1100,7 @@ category: Base
   .mix-grid-col-sm_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 328px) and (min-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 767px) {
   .grid-col-md_1of6 {
     width: 16.66667%; }
   .mix-grid-col-md_push1of6 {
@@ -1221,7 +1138,7 @@ category: Base
   .mix-grid-col-md_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 328px) and (min-width: 1027px) {
+@media only screen and (max-width: 767px) and (min-width: 1027px) {
   .grid-col-lg_1of6 {
     width: 16.66667%; }
   .mix-grid-col-lg_push1of6 {
@@ -1259,7 +1176,7 @@ category: Base
   .mix-grid-col-lg_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 328px) {
+@media only screen and (max-width: 767px) {
   .hdg {
     font-family: "Lora", "Georgia" serif;
     font-weight: normal;
@@ -1608,11 +1525,8 @@ category: Navigation
     background-color: #fff;
     border-color: #ddd;
     border-radius: 3px 3px 0 0; }
-  /* ---------------------------------------------------------------------
- Vertical list
------------------------------------------------------------------------- */
   .vlist > * {
-    padding: 10px; }
+    padding: 10px 0; }
   .mix-vlist_divided > * + * {
     border-top: 1px solid; }
   /* ---------------------------------------------------------------------
@@ -1647,4 +1561,7 @@ Page body elements are wrapped with a wrapper div
  Wrapper
 ------------------------------------------------------------------------ */
   .wrapper {
-    padding: 20px; } }
+    padding: 20px; }
+  .input {
+    width: 100%;
+    max-width: 100%; } }

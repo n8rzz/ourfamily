@@ -1,17 +1,20 @@
 <div class="grid">
-  <div class="grid-col grid-col-sm_6of6">
+  <div class="grid-col grid-col-sm_6of6 mix-grid-col-md_push1of6 grid-col-md_5of6">
     <h2 class="hdg hdg_2">Edit Post</h2>
-    <%= form_for(@post) do |f| %>
-        <%= render 'shared/error_messages', object: @post %>
 
-        <ul>
+    <%= form_for(@post) do |f| %>
+      <%= render 'shared/error_messages', object: @post %>
+
+        <ul class="vlist">
             <li>
                 <%= f.label :title, :class => 'input-label' %>
-                <%= f.text_field :title, :class => 'input' %>
+                <br />
+                <%= f.text_field :title, :class => 'input input-sm' %>
             </li>
             <li>
                 <%= f.label :body, :class => 'input-label' %>
-                <%= f.text_area :body, :class => 'input-textarea' %>
+                <br />
+                <%= f.text_area :body, :class => 'input input-textarea' %>
             </li>
             <li>
                 <%= f.label :photo, "Photo" %>
