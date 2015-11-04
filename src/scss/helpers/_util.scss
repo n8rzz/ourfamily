@@ -1,6 +1,22 @@
 // ------------------------------------------------------------------------
 // Mixins
 // ------------------------------------------------------------------------
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin transition($direction, $duration) {
+    -webkit-transition: $direction $duration ease-in-out;
+    -moz-transition:  $direction $duration ease-in-out;
+    -ms-transition: $direction $duration ease-in-out;
+    -o-transition: $direction $duration ease-in-out;
+    transition: $direction $duration ease-in-out;
+}
+
 @mixin clearfix() {
     &:before,
     &:after {
@@ -60,7 +76,7 @@
 
 .util-breakWord { word-break: break-word; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $SCREEN_WIDTH_MD) {
     .util-isNotScrollable {
         overflow: hidden;
     }
@@ -69,10 +85,10 @@
 // ------------------------------------------------------------------------
 // Visibility
 // ------------------------------------------------------------------------
-@media screen and (min-width: 768px) {
-    .util-isHiddenMD { display: none !important; }
+@media screen and (min-width: ($SCREEN_WIDTH_MD + 1px)) {
+    .u-isHiddenMD { display: none !important; }
 }
 
-@media screen and (max-width: 767px) {
-    .util-isHiddenSM { display: none !important; }
+@media screen and (max-width: $SCREEN_WIDTH_MD) {
+    .u-isHiddenSM { display: none !important; }
 }
