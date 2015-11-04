@@ -1,0 +1,17 @@
+// ---------------------------------------------------------------------
+// Masthead
+// ---------------------------------------------------------------------
+.masthead {
+  display: table;
+  width: 100%;
+}
+
+.masthead-left {
+  display: table-cell;
+  width: 50%;
+}
+
+.masthead-right {
+  display: table-cell;
+  width: 50%;
+}

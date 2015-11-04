@@ -7,7 +7,7 @@
 @import "helpers/_fonts";
 @import "base/_elements";
 
-@media only screen and (min-width: $SCREEN_WIDTH_MD) {
+@media only screen and (min-width: $SCREEN_WIDTH_MD + 1px) {
   @import "_screen_md";
 }
 

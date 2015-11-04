@@ -93,10 +93,10 @@ textarea {
 
 /* Colors */
 /* Misc Colors */
-.util-isHidden {
+.u-isHidden {
   display: none !important; }
 
-.util-isVisuallyHidden {
+.u-isVisuallyHidden {
   overflow: hidden !important;
   width: 1px !important;
   height: 1px !important;
@@ -108,15 +108,15 @@ textarea {
   clip: rect(1px 1px 1px 1px) !important;
   clip: rect(1px, 1px, 1px, 1px) !important; }
 
-.util-isTruncated {
+.u-isTruncated {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
-.util-breakWord {
+.u-breakWord {
   word-break: break-word; }
 
 @media screen and (max-width: 767px) {
-  .util-isNotScrollable {
+  .u-isNotScrollable {
     overflow: hidden; } }
 
 @media screen and (min-width: 768px) {
@@ -139,37 +139,24 @@ textarea {
 img {
   max-width: 100%; }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .page {
+    background-color: #fefffd;
     font-size: 16px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     line-height: 1.2; }
-  /*doc
----
-title: Alert
-name: alert
-category: Base
----
-
-```html_example
-<div class="alert">
-    Something to draw attention to
-</div>
-<div class="alert alert-success">
-    Something happened successfully
-</div>
-<div class="alert alert-caution">
-    A Caution to draw attention to
-</div>
-<div class="alert alert-error">
-    An Error to draw attention to
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Modules
------------------------------------------------------------------------- */
+  .page-hd {
+    border-bottom: 4px solid #2d9fe9; }
+  .masthead {
+    display: table;
+    width: 100%; }
+  .masthead-left {
+    display: table-cell;
+    width: 50%; }
+  .masthead-right {
+    display: table-cell;
+    width: 50%; }
   .alert {
     margin-bottom: 10px;
     padding: 15px;
@@ -190,25 +177,6 @@ category: Base
     color: #911;
     background-color: #fcdede;
     border-color: #d2b2b2; }
-  /*doc
----
-title: Blocks
-name: blocks
-category: Base
----
-
-###See Media section for additional usage of the blocks module
-
-```html_example
-<ul class="blocks">
-    <li class="blocks-example blocks_2up">2 blocks</li>
-    <li class="blocks-example blocks_2up">2 blocks</li>
-</ul>
-```
-*/
-  /* ---------------------------------------------------------------------
- Blocks
------------------------------------------------------------------------- */
   .blocks {
     margin: -20px 0 0 -20px;
     font-size: 0; }
@@ -224,22 +192,6 @@ category: Base
     width: 33.3334%; }
   .blocks_4up {
     width: 25%; }
-  /*doc
----
-title: Box
-name: box
-category: Base
----
-
-See Media section for additional usage of the box module
-
-```html_example
-    <div class="box">box</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Box
------------------------------------------------------------------------- */
   .box {
     padding: 20px;
     background-color: #efefef;
@@ -269,6 +221,9 @@ See Media section for additional usage of the box module
     transition: all 0.12s ease-in-out; }
   .btn:hover {
     background: #333333; }
+  .btn-sm {
+    padding: 4px 12px;
+    font-size: 14px; }
   .btn_disabled {
     color: #666666;
     /* fallback for non rgba browsers */
@@ -286,27 +241,6 @@ See Media section for additional usage of the box module
   /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
-  .input {
-    width: 500px;
-    max-width: 85%;
-    padding: 5px 10px;
-    border: 1px solid #222222;
-    border-radius: 2px; }
-  .input-sm {
-    padding-top: 5px;
-    padding-bottom: 5px; }
-  .input-md {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .input-lg {
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  .input-textarea {
-    height: 160px;
-    resize: none; }
-  .mix-input_block {
-    display: block;
-    width: 95%; }
   .grid:before,
   .grid:after {
     content: " ";
@@ -318,7 +252,7 @@ See Media section for additional usage of the box module
   .grid-col-pull {
     float: right; } }
 
-@media only screen and (min-width: 767px) and (min-width: 0px) {
+@media only screen and (min-width: 768px) and (min-width: 0px) {
   .grid-col-sm_1of6 {
     width: 16.66667%; }
   .mix-grid-col-sm_push1of6 {
@@ -356,7 +290,7 @@ See Media section for additional usage of the box module
   .mix-grid-col-sm_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 767px) and (min-width: 767px) {
+@media only screen and (min-width: 768px) and (min-width: 767px) {
   .grid-col-md_1of6 {
     width: 16.66667%; }
   .mix-grid-col-md_push1of6 {
@@ -394,7 +328,7 @@ See Media section for additional usage of the box module
   .mix-grid-col-md_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 767px) and (min-width: 1027px) {
+@media only screen and (min-width: 768px) and (min-width: 1027px) {
   .grid-col-lg_1of6 {
     width: 16.66667%; }
   .mix-grid-col-lg_push1of6 {
@@ -432,14 +366,16 @@ See Media section for additional usage of the box module
   .mix-grid-col-lg_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .hdg {
     font-family: "Lora", "Georgia" serif;
     font-weight: normal;
     line-height: 1.2; }
   .hdg > a {
-    text-decoration: inherit;
-    color: inerit; }
+    text-decoration: inherit; }
+  .hdg > a:hover {
+    color: #2d9fe9;
+    transition: all 0.12s ease-in-out; }
   .hdg_1 {
     font-size: 26px; }
   .hdg_2 {
@@ -544,39 +480,29 @@ Horizontal list elements with pipes separating each element:
     margin-left: 12px;
     padding-left: 12px;
     border-left: 1px solid; }
-  /*doc
----
-title: Media Object
-name: media_object
-category: Media
----
-
-```html_example
-<div class="box">
-    <div class="media">
-        <div class="media-img">
-            <img src="http://placehold.it/100x100" alt=""/>
-        </div>
-        <div class="media-bd">
-            <div class="preview">
-                <div class="preview-hd">
-                    <h2 class="hdg hdg_2 mix-hdg_caps">Preview Headline goes here</h2>
-                </div>
-                <div class="preview-subhd">
-                    <h3 class="hdg hdg_4">Preview SubHeading goes here</h3>
-                </div>
-                <div class="preview-bd">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Media Object
------------------------------------------------------------------------- */
+  .input {
+    width: 500px;
+    max-width: 85%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #222222;
+    border-radius: 2px;
+    font-size: 16px; }
+  .input-sm {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  .input-md {
+    padding-top: 12px;
+    padding-bottom: 12px; }
+  .input-lg {
+    padding-top: 18px;
+    padding-bottom: 18px; }
+  .input-textarea {
+    height: 160px;
+    resize: none; }
+  .mix-input_block {
+    display: block;
+    width: 95%; }
   .media {
     overflow: hidden; }
   .media-img {
@@ -584,203 +510,16 @@ category: Media
     margin-right: 20px; }
   .media-bd {
     overflow: hidden; }
-  /*doc
----
-title: Preview
-name: preview
-category: Media
----
-
-```html_example
-<div class="box">
-    <div class="box-hd">
-        <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-    </div>
-    <div class="box-bd">
-        <div class="preview">
-            <div class="preview-img">
-                <img src="http://fillmurray.com/g/800/400" alt=""/>
-            </div>
-            <div class="preview-hd">
-                <h2 class="hdg hdg_2">Feature Headline</h2>
-            </div>
-            <div class="preview-bd">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-    </div>
-</div>
-```
-*/
-  /*doc
----
-title: Preview 2up
-parent: preview
-name: preview_2up
-category: Media
----
-
-```html_example
-<ul class="blocks">
-    <li class="blocks_2up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="blocks_2up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-```
-*/
-  /*doc
----
-title: Preview 3up
-parent: preview
-name: preview_3up
-category: Media
----
-
-```html_example
-<ul class="blocks">
-    <li class="blocks_3up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="blocks_3up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="blocks_3up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-```
-*/
-  /* ---------------------------------------------------------------------
- Preview
------------------------------------------------------------------------- */
   .preview-hd {
     margin-bottom: 2px; }
   .preview-subhd {
     margin-bottom: 12px; }
-  /*doc
----
-title: Tabbed Nav
-name: tabbed_nav
-category: Navigation
----
-
-```html_example
-<div class="tabNav">
-  <div class="tabNav-group">
-    <a href="#" class="tabNav-tab tabNav-tab_isSelected">Foo tab</a>
-    <a href="#" class="tabNav-tab">Bar tab</a>
-  </div>
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Tabbed Navigation
------------------------------------------------------------------------- */
-  .tabNav {
-    border-bottom: 1px solid #dddddd; }
-  .tabNav-group {
-    margin-bottom: -1px; }
-  .tabNav-tab {
-    display: inline-block;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 20px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-bottom: 0; }
-  .tabNav-tab_isSelected {
-    color: #333;
-    background-color: #fff;
-    border-color: #ddd;
-    border-radius: 3px 3px 0 0; }
+  .txt-left {
+    text-align: left; }
+  .txt-center {
+    text-align: center; }
+  .txt-right {
+    text-align: right; }
   .vlist > * {
     padding: 10px 0; }
   .mix-vlist_divided > * + * {
@@ -803,35 +542,22 @@ category: Navigation
 
 @media only screen and (max-width: 767px) and (min-width: 0) {
   .page {
+    background-color: #fefffd;
     font-size: 16px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     line-height: 1.2; }
-  /*doc
----
-title: Alert
-name: alert
-category: Base
----
-
-```html_example
-<div class="alert">
-    Something to draw attention to
-</div>
-<div class="alert alert-success">
-    Something happened successfully
-</div>
-<div class="alert alert-caution">
-    A Caution to draw attention to
-</div>
-<div class="alert alert-error">
-    An Error to draw attention to
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Modules
------------------------------------------------------------------------- */
+  .page-hd {
+    border-bottom: 4px solid #2d9fe9; }
+  .masthead {
+    display: table;
+    width: 100%; }
+  .masthead-left {
+    display: table-cell;
+    width: 50%; }
+  .masthead-right {
+    display: table-cell;
+    width: 50%; }
   .alert {
     margin-bottom: 10px;
     padding: 15px;
@@ -852,25 +578,6 @@ category: Base
     color: #911;
     background-color: #fcdede;
     border-color: #d2b2b2; }
-  /*doc
----
-title: Blocks
-name: blocks
-category: Base
----
-
-###See Media section for additional usage of the blocks module
-
-```html_example
-<ul class="blocks">
-    <li class="blocks-example blocks_2up">2 blocks</li>
-    <li class="blocks-example blocks_2up">2 blocks</li>
-</ul>
-```
-*/
-  /* ---------------------------------------------------------------------
- Blocks
------------------------------------------------------------------------- */
   .blocks {
     margin: -20px 0 0 -20px;
     font-size: 0; }
@@ -886,22 +593,6 @@ category: Base
     width: 33.3334%; }
   .blocks_4up {
     width: 25%; }
-  /*doc
----
-title: Box
-name: box
-category: Base
----
-
-See Media section for additional usage of the box module
-
-```html_example
-    <div class="box">box</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Box
------------------------------------------------------------------------- */
   .box {
     padding: 20px;
     background-color: #efefef;
@@ -931,6 +622,9 @@ See Media section for additional usage of the box module
     transition: all 0.12s ease-in-out; }
   .btn:hover {
     background: #333333; }
+  .btn-sm {
+    padding: 4px 12px;
+    font-size: 14px; }
   .btn_disabled {
     color: #666666;
     /* fallback for non rgba browsers */
@@ -948,27 +642,6 @@ See Media section for additional usage of the box module
   /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
-  .input {
-    width: 500px;
-    max-width: 85%;
-    padding: 5px 10px;
-    border: 1px solid #222222;
-    border-radius: 2px; }
-  .input-sm {
-    padding-top: 5px;
-    padding-bottom: 5px; }
-  .input-md {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .input-lg {
-    padding-top: 15px;
-    padding-bottom: 15px; }
-  .input-textarea {
-    height: 160px;
-    resize: none; }
-  .mix-input_block {
-    display: block;
-    width: 95%; }
   .grid:before,
   .grid:after {
     content: " ";
@@ -1100,8 +773,10 @@ See Media section for additional usage of the box module
     font-weight: normal;
     line-height: 1.2; }
   .hdg > a {
-    text-decoration: inherit;
-    color: inerit; }
+    text-decoration: inherit; }
+  .hdg > a:hover {
+    color: #2d9fe9;
+    transition: all 0.12s ease-in-out; }
   .hdg_1 {
     font-size: 26px; }
   .hdg_2 {
@@ -1206,39 +881,29 @@ Horizontal list elements with pipes separating each element:
     margin-left: 12px;
     padding-left: 12px;
     border-left: 1px solid; }
-  /*doc
----
-title: Media Object
-name: media_object
-category: Media
----
-
-```html_example
-<div class="box">
-    <div class="media">
-        <div class="media-img">
-            <img src="http://placehold.it/100x100" alt=""/>
-        </div>
-        <div class="media-bd">
-            <div class="preview">
-                <div class="preview-hd">
-                    <h2 class="hdg hdg_2 mix-hdg_caps">Preview Headline goes here</h2>
-                </div>
-                <div class="preview-subhd">
-                    <h3 class="hdg hdg_4">Preview SubHeading goes here</h3>
-                </div>
-                <div class="preview-bd">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Media Object
------------------------------------------------------------------------- */
+  .input {
+    width: 500px;
+    max-width: 85%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #222222;
+    border-radius: 2px;
+    font-size: 16px; }
+  .input-sm {
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  .input-md {
+    padding-top: 12px;
+    padding-bottom: 12px; }
+  .input-lg {
+    padding-top: 18px;
+    padding-bottom: 18px; }
+  .input-textarea {
+    height: 160px;
+    resize: none; }
+  .mix-input_block {
+    display: block;
+    width: 95%; }
   .media {
     overflow: hidden; }
   .media-img {
@@ -1246,203 +911,16 @@ category: Media
     margin-right: 20px; }
   .media-bd {
     overflow: hidden; }
-  /*doc
----
-title: Preview
-name: preview
-category: Media
----
-
-```html_example
-<div class="box">
-    <div class="box-hd">
-        <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-    </div>
-    <div class="box-bd">
-        <div class="preview">
-            <div class="preview-img">
-                <img src="http://fillmurray.com/g/800/400" alt=""/>
-            </div>
-            <div class="preview-hd">
-                <h2 class="hdg hdg_2">Feature Headline</h2>
-            </div>
-            <div class="preview-bd">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-    </div>
-</div>
-```
-*/
-  /*doc
----
-title: Preview 2up
-parent: preview
-name: preview_2up
-category: Media
----
-
-```html_example
-<ul class="blocks">
-    <li class="blocks_2up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="blocks_2up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-```
-*/
-  /*doc
----
-title: Preview 3up
-parent: preview
-name: preview_3up
-category: Media
----
-
-```html_example
-<ul class="blocks">
-    <li class="blocks_3up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="blocks_3up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="blocks_3up">
-        <div class="box">
-            <div class="box-hd">
-                <h2 class="hdg hdg_2 mix-hdg_caps mix-hdg_blue">Feature Category</h2>
-            </div>
-            <div class="box-bd">
-                <div class="preview">
-                    <div class="preview-img">
-                        <img src="http://fillmurray.com/g/800/400" alt=""/>
-                    </div>
-                    <div class="preview-hd">
-                        <h2 class="hdg hdg_2">Feature Headline</h2>
-                    </div>
-                    <div class="preview-bd">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-```
-*/
-  /* ---------------------------------------------------------------------
- Preview
------------------------------------------------------------------------- */
   .preview-hd {
     margin-bottom: 2px; }
   .preview-subhd {
     margin-bottom: 12px; }
-  /*doc
----
-title: Tabbed Nav
-name: tabbed_nav
-category: Navigation
----
-
-```html_example
-<div class="tabNav">
-  <div class="tabNav-group">
-    <a href="#" class="tabNav-tab tabNav-tab_isSelected">Foo tab</a>
-    <a href="#" class="tabNav-tab">Bar tab</a>
-  </div>
-</div>
-```
-*/
-  /* ---------------------------------------------------------------------
- Tabbed Navigation
------------------------------------------------------------------------- */
-  .tabNav {
-    border-bottom: 1px solid #dddddd; }
-  .tabNav-group {
-    margin-bottom: -1px; }
-  .tabNav-tab {
-    display: inline-block;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 20px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-bottom: 0; }
-  .tabNav-tab_isSelected {
-    color: #333;
-    background-color: #fff;
-    border-color: #ddd;
-    border-radius: 3px 3px 0 0; }
+  .txt-left {
+    text-align: left; }
+  .txt-center {
+    text-align: center; }
+  .txt-right {
+    text-align: right; }
   .vlist > * {
     padding: 10px 0; }
   .mix-vlist_divided > * + * {
@@ -1462,8 +940,13 @@ category: Navigation
     margin-bottom: 24px; }
   .wrapper {
     padding: 20px; }
+  .masthead-left,
+  .masthead-right {
+    display: block;
+    width: 100%; }
   .input {
     width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    font-size: 14px; }
   .wrapper {
     padding: 10px; } }

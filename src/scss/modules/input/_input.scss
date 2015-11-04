@@ -4,24 +4,26 @@
 .input {
     width: 500px;
     max-width: 85%;
-    padding: 5px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 1px solid #222222;
     border-radius: 2px;
+    font-size: $BASE_FONT_SIZE;
 }
 
 .input-sm {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .input-md {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .input-lg {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 .input-textarea {
