@@ -1,7 +1,10 @@
 <li>
-    <ul class="hlist">
-        <li>@</li>
-        <li><%= user.email %></li>
-        <li><%= time_ago_in_words(user.last_sign_in_at) %></li>
-    </ul>
+  <ul class="hlist">
+    <li>
+      <%= user.name %>
+    </li>
+    <li>
+      <%= time_ago_in_words(user.last_sign_in_at) %>
+    </li>
+  </ul>
 </li>
