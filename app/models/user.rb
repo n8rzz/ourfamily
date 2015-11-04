@@ -5,4 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts, dependent: :destroy
+
+  validates :first_name, :last_name, :birthday, presence: true
+  validates :first_name, :last_name, length: { maximum: 50 }
+
+  def name
+    [first_name, last_name].join ' '
+  end
 end

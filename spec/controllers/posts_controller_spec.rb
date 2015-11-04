@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PostsController, type: :controller do
+describe PostsController, type: :controller do
   let(:user) { create(:user) }
 
   describe 'GET #show' do

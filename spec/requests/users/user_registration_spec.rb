@@ -7,6 +7,9 @@ describe 'user registration' do
 
   describe 'allows new users to register' do
     before do
+      fill_in 'First name', with: 'Jim'
+      fill_in 'Last name', with: 'Bob'
+      fill_in 'Birthday', with: '03/13/1980'
       fill_in 'Email', with: 'jimbob@bobstires.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'

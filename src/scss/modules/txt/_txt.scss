@@ -1,12 +1,16 @@
 // ---------------------------------------------------------------------
-// Vertical list
+// Text
 // ---------------------------------------------------------------------
-.vlist {}
+.txt {}
 
-.vlist > * {
-    padding: 10px 0;
+.txt-left {
+    text-align: left;
 }
 
-.mix-vlist_divided > * + * {
-    border-top: 1px solid;
+.txt-center {
+    text-align: center;
+}
+
+.txt-right {
+    text-align: right;
 }
