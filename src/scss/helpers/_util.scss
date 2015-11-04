@@ -61,23 +61,23 @@
 // ------------------------------------------------------------------------
 // Utilities
 // ------------------------------------------------------------------------
-.util-isHidden {
+.u-isHidden {
     display: none !important;
 }
 
-.util-isVisuallyHidden {
+.u-isVisuallyHidden {
     @include isVisuallyHidden();
 }
 
-.util-isTruncated {
+.u-isTruncated {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.util-breakWord { word-break: break-word; }
+.u-breakWord { word-break: break-word; }
 
 @media screen and (max-width: $SCREEN_WIDTH_MD) {
-    .util-isNotScrollable {
+    .u-isNotScrollable {
         overflow: hidden;
     }
 }

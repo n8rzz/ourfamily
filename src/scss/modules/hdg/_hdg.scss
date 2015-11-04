@@ -9,7 +9,11 @@
 
 .hdg > a {
     text-decoration: inherit;
-    color: inerit;
+}
+
+.hdg > a:hover {
+    color: $COLOR_SECONDARY;
+    @include transition(all, .12s);
 }
 
 .hdg_1 {

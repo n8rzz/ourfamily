@@ -1,15 +1,16 @@
 // ---------------------------------------------------------------------
-// Media Object
+// Text
 // ---------------------------------------------------------------------
-.media {
-    overflow: hidden;
+.txt {}
+
+.txt-left {
+    text-align: left;
 }
 
-.media-img {
-    float: left;
-    margin-right: 20px;
+.txt-center {
+    text-align: center;
 }
 
-.media-bd {
-    overflow: hidden;
+.txt-right {
+    text-align: right;
 }
