@@ -1,4 +1,4 @@
-// app.js
+// import * as $ from 'jquery';
 
 function App() {
     console.log('app');

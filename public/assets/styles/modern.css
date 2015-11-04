@@ -503,12 +503,6 @@ Horizontal list elements with pipes separating each element:
   .mix-input_block {
     display: block;
     width: 95%; }
-  .logo {
-    text-decoration: none; }
-  .logo a {
-    color: #222222; }
-  .logo a:hover {
-    color: #2d9fe9; }
   .media {
     overflow: hidden; }
   .media-img {
@@ -910,12 +904,6 @@ Horizontal list elements with pipes separating each element:
   .mix-input_block {
     display: block;
     width: 95%; }
-  .logo {
-    text-decoration: none; }
-  .logo a {
-    color: #222222; }
-  .logo a:hover {
-    color: #2d9fe9; }
   .media {
     overflow: hidden; }
   .media-img {
@@ -952,6 +940,10 @@ Horizontal list elements with pipes separating each element:
     margin-bottom: 24px; }
   .wrapper {
     padding: 20px; }
+  .masthead-left,
+  .masthead-right {
+    display: block;
+    width: 100%; }
   .input {
     width: 100%;
     max-width: 100%;
