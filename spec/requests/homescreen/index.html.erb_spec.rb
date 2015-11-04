@@ -20,6 +20,7 @@ describe 'homescreen#index.html.erb', type: :view do
     it { should_not have_css('a', text: 'Profile') }
     it { should_not have_selector('input[type=submit][value="Logout"]') }
     it { should_not have_content('Recent Posts') }
+    it { should_not have_content('Member Activity') }
   end
 
   describe 'when signed in' do
@@ -33,6 +34,8 @@ describe 'homescreen#index.html.erb', type: :view do
     it { should have_content('Recent Posts') }
     it { should have_css('h2', text: 'Recent Posts') }
     it { should have_selector('ul.vlist') }
+    it { should have_content('Member Activity') }
+    it { should have_css('li', text: user.name) }
     # it { should have_css('div', text: 'ago') }
     # it { should have_css('div', text: post.user.email) }
     # it { should have_css('div', text: '{EDIT}') }
