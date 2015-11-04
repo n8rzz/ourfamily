@@ -139,7 +139,7 @@ textarea {
 img {
   max-width: 100%; }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .page {
     font-size: 16px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -269,6 +269,9 @@ See Media section for additional usage of the box module
     transition: all 0.12s ease-in-out; }
   .btn:hover {
     background: #333333; }
+  .btn-sm {
+    padding: 4px 12px;
+    font-size: 14px; }
   .btn_disabled {
     color: #666666;
     /* fallback for non rgba browsers */
@@ -291,7 +294,8 @@ See Media section for additional usage of the box module
     max-width: 85%;
     padding: 5px 10px;
     border: 1px solid #222222;
-    border-radius: 2px; }
+    border-radius: 2px;
+    font-size: 16px; }
   .input-sm {
     padding-top: 5px;
     padding-bottom: 5px; }
@@ -318,7 +322,7 @@ See Media section for additional usage of the box module
   .grid-col-pull {
     float: right; } }
 
-@media only screen and (min-width: 767px) and (min-width: 0px) {
+@media only screen and (min-width: 768px) and (min-width: 0px) {
   .grid-col-sm_1of6 {
     width: 16.66667%; }
   .mix-grid-col-sm_push1of6 {
@@ -356,7 +360,7 @@ See Media section for additional usage of the box module
   .mix-grid-col-sm_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 767px) and (min-width: 767px) {
+@media only screen and (min-width: 768px) and (min-width: 767px) {
   .grid-col-md_1of6 {
     width: 16.66667%; }
   .mix-grid-col-md_push1of6 {
@@ -394,7 +398,7 @@ See Media section for additional usage of the box module
   .mix-grid-col-md_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 767px) and (min-width: 1027px) {
+@media only screen and (min-width: 768px) and (min-width: 1027px) {
   .grid-col-lg_1of6 {
     width: 16.66667%; }
   .mix-grid-col-lg_push1of6 {
@@ -432,7 +436,7 @@ See Media section for additional usage of the box module
   .mix-grid-col-lg_pull6of6 {
     margin-right: 100%; } }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .hdg {
     font-family: "Lora", "Georgia" serif;
     font-weight: normal;
@@ -931,6 +935,9 @@ See Media section for additional usage of the box module
     transition: all 0.12s ease-in-out; }
   .btn:hover {
     background: #333333; }
+  .btn-sm {
+    padding: 4px 12px;
+    font-size: 14px; }
   .btn_disabled {
     color: #666666;
     /* fallback for non rgba browsers */
@@ -953,7 +960,8 @@ See Media section for additional usage of the box module
     max-width: 85%;
     padding: 5px 10px;
     border: 1px solid #222222;
-    border-radius: 2px; }
+    border-radius: 2px;
+    font-size: 16px; }
   .input-sm {
     padding-top: 5px;
     padding-bottom: 5px; }
@@ -1464,6 +1472,7 @@ category: Navigation
     padding: 20px; }
   .input {
     width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    font-size: 14px; }
   .wrapper {
     padding: 10px; } }

@@ -26,6 +26,11 @@
     background: #333333;
 }
 
+.btn-sm {
+  padding: 4px 12px;
+  font-size: $BASE_FONT_SIZE - 2px;
+}
+
 .btn_disabled {
     color: #666666; /* fallback for non rgba browsers */
     color: rgba(0,0,0,.3);
