@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  acts_as_readable :on => :created_at
   belongs_to :user
 
   validates :title, presence: true, length: { maximum: 100 }
