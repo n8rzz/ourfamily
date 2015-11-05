@@ -39,12 +39,5 @@ namespace :db do
                    created_at: Faker::Time.between(180.days.ago, 7.days.ago, :all)
                   )
     end
-
-    # 5.times do |n|
-    #  Read_Marks.create!(readable_id: n,
-    #                     readable_type: 'Post',
-    #                     reader_id: 3,
-    #                     reader_type: 'User')
-    # end
   end
 end
