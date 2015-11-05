@@ -2,8 +2,16 @@
     <div class="excerpt">
         <div class="excerpt-hd">
             <h2 class="hdg hdg_3"><%= link_to post.title, post %></h2>
-            <div><%= time_ago_in_words(post.created_at) %> ago</div>
-            <div><%= post.user.email %></div>
+            <div class="txt txt-sm mix-txt_italic">
+              <ul class="hlist">
+                <li>
+                  <%= time_ago_in_words(post.created_at) %> ago
+                </li>
+                <li>
+                  <%= post.user.name%>
+                </li>
+              </ul>
+            </div>
         </div>
         <div class="excerpt-bd">
             <%= post.body %>

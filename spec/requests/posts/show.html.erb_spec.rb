@@ -19,11 +19,12 @@ describe 'posts/show.html.erb', type: :view do
     it { should render_template(:show) }
     it { should have_css('h1', text: 'OurFamily') }
     it { should have_css('h2', text: post.title) }
-    it { should have_css('h3', text: time_ago_in_words(post.created_at)) }
-    it { should have_css('div', text: post.user.email) }
+    it { should have_css('li', text: time_ago_in_words(post.created_at)) }
+    it { should have_css('div', text: post.user.name) }
     it { should have_css('div', text: post.body) }
     it { should have_css('a', text: 'New Post') }
     it { should have_css('a', text: 'Edit Post') }
+    it { should have_content(user.name) }
     # it { should have_css('a', text: 'Delete Post') }
 
     describe 'newest post' do
