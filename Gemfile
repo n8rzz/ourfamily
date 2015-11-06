@@ -10,6 +10,7 @@ gem 'omniauth', '~> 1.2.2'
 gem 'populator', '~> 1.0.0'
 gem "paperclip", "~> 4.3"
 gem 'faker', '~> 1.5.0'
+gem 'unread', '0.7.0'
 
 group :development, :test do
   gem 'rspec-rails', '3.2.1'

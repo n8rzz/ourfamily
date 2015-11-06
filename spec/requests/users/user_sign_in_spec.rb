@@ -13,11 +13,7 @@ describe 'user login' do
   describe 'allows login' do
     let(:user) { create(:user) }
 
-    before do
-      fill_in 'Email', with: user.email
-      fill_in 'Password', with: user.password
-      click_button 'Log in'
-    end
+    before { sign_in user }
 
     it { should have_content('Signed in successfully.') }
   end
