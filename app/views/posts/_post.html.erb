@@ -1,5 +1,14 @@
 <li>
-    <div class="excerpt">
+    <% if post.seen_by_all? %>
+
+      <div class="excerpt">
+
+      <% else %>
+
+      <div class="excerpt mix-excerpt_isUnreadByAll">
+
+    <% end %>
+
         <div class="excerpt-hd">
             <h2 class="hdg hdg_3"><%= link_to post.title, post %></h2>
             <div class="txt txt-sm mix-txt_italic">
@@ -8,8 +17,15 @@
                   <%= time_ago_in_words(post.created_at) %> ago
                 </li>
                 <li>
-                  <%= post.user.name%>
+                  <%= post.user.name %>
                 </li>
+
+                <% if post.seen_by_all? %>
+
+                  <li>{READ}</li>
+
+                <% end %>
+
               </ul>
             </div>
         </div>

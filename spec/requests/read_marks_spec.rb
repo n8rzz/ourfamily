@@ -31,7 +31,8 @@ describe 'read marks' do
   end
 
   describe 'when everyone has seen a post' do
-    it 'displays with a seen by all css class'
-    it 'contains seen by all'
+    before { visit home_path }
+
+    it { should_not have_css('.mix-excerpt_isUnreadByAll') }
   end
 end
