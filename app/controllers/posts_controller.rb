@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!
-  before_action :correct_user, only: :destroy
+  before_action :correct_user, only: [:destroy, :edit]
 
   def show
     @post = Post.find(params[:id])
     @newer = @post.newer
     @older = @post.older
+    @post.mark_as_read! :for => current_user
+    read_by @post
   end
 
   def new
@@ -46,6 +48,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :body, :published, :photo)
+  end
+
+  def read_by(post)
+    @read_by = User.have_read(post).map(&:name)
   end
 
   def correct_user

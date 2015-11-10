@@ -14,7 +14,7 @@ describe 'homescreen#index.html.erb', type: :view do
   it { should have_css('h1', text: 'OurFamily') }
 
   describe 'when not signed in' do
-    # it { should redirect_to('/users/sign_in') }
+    # it { should redirect_to(root_path) }
     it { should have_css('a', text: 'Register') }
     it { should have_css('a', text: 'Login') }
     it { should_not have_css('a', text: 'Profile') }

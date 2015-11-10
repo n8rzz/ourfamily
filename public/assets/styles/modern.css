@@ -393,82 +393,6 @@ img {
     text-transform: uppercase; }
   .mix-hdg_blue {
     color: #0066cc; }
-  /*doc
----
-title: Hlist
-name: hlist
-category: Base
----
-
-```html_example
-<ul class="hlist">
-    <li>hlist</li>
-    <li>hlist</li>
-    <li>hlist</li>
-    <li>hlist</li>
-</ul>
-```
-*/
-  /*doc
----
-title: Hlist tight
-parent: hlist
-name: hlist_tight
-category: Base
----
-
-Horizontal list elements with tight spacing:
-
-```html_example
-<ul class="hlist hlist_tight">
-    <li>hlist tight</li>
-    <li>hlist tight</li>
-    <li>hlist tight</li>
-    <li>hlist tight</li>
-</ul>
-```
-*/
-  /*doc
----
-title: Hlist loose
-parent: hlist
-name: hlist_loose
-category: Base
----
-
-Horizontal list elements with loose spacing:
-
-```html_example
-<ul class="hlist hlist_loose">
-    <li>hlist loose</li>
-    <li>hlist loose</li>
-    <li>hlist loose</li>
-    <li>hlist loose</li>
-</ul>
-```
-*/
-  /*doc
----
-title: Hlist divided
-parent: hlist
-name: hlist_divided
-category: Base
----
-
-Horizontal list elements with pipes separating each element:
-
-```html_example
-<ul class="hlist mix-hlist_divided">
-    <li>hlist divided</li>
-    <li>hlist divided</li>
-    <li>hlist divided</li>
-    <li>hlist divided</li>
-</ul>
-```
-*/
-  /* ---------------------------------------------------------------------
- hlist
------------------------------------------------------------------------- */
   .hlist > * {
     display: inline-block;
     padding: 5px; }
@@ -514,12 +438,22 @@ Horizontal list elements with pipes separating each element:
     margin-bottom: 2px; }
   .preview-subhd {
     margin-bottom: 12px; }
+  .txt-sm {
+    font-size: 14px; }
+  .txt-md {
+    font-size: 16px; }
   .txt-left {
     text-align: left; }
   .txt-center {
     text-align: center; }
   .txt-right {
     text-align: right; }
+  .mix-txt_light {
+    color: #999999; }
+  .mix-txt_cursive {
+    font-family: "Indie Flower", cursive; }
+  .mix-txt_italic {
+    font-style: italic; }
   .vlist > * {
     padding: 10px 0; }
   .mix-vlist_divided > * + * {
@@ -794,82 +728,6 @@ Horizontal list elements with pipes separating each element:
     text-transform: uppercase; }
   .mix-hdg_blue {
     color: #0066cc; }
-  /*doc
----
-title: Hlist
-name: hlist
-category: Base
----
-
-```html_example
-<ul class="hlist">
-    <li>hlist</li>
-    <li>hlist</li>
-    <li>hlist</li>
-    <li>hlist</li>
-</ul>
-```
-*/
-  /*doc
----
-title: Hlist tight
-parent: hlist
-name: hlist_tight
-category: Base
----
-
-Horizontal list elements with tight spacing:
-
-```html_example
-<ul class="hlist hlist_tight">
-    <li>hlist tight</li>
-    <li>hlist tight</li>
-    <li>hlist tight</li>
-    <li>hlist tight</li>
-</ul>
-```
-*/
-  /*doc
----
-title: Hlist loose
-parent: hlist
-name: hlist_loose
-category: Base
----
-
-Horizontal list elements with loose spacing:
-
-```html_example
-<ul class="hlist hlist_loose">
-    <li>hlist loose</li>
-    <li>hlist loose</li>
-    <li>hlist loose</li>
-    <li>hlist loose</li>
-</ul>
-```
-*/
-  /*doc
----
-title: Hlist divided
-parent: hlist
-name: hlist_divided
-category: Base
----
-
-Horizontal list elements with pipes separating each element:
-
-```html_example
-<ul class="hlist mix-hlist_divided">
-    <li>hlist divided</li>
-    <li>hlist divided</li>
-    <li>hlist divided</li>
-    <li>hlist divided</li>
-</ul>
-```
-*/
-  /* ---------------------------------------------------------------------
- hlist
------------------------------------------------------------------------- */
   .hlist > * {
     display: inline-block;
     padding: 5px; }
@@ -915,12 +773,22 @@ Horizontal list elements with pipes separating each element:
     margin-bottom: 2px; }
   .preview-subhd {
     margin-bottom: 12px; }
+  .txt-sm {
+    font-size: 14px; }
+  .txt-md {
+    font-size: 16px; }
   .txt-left {
     text-align: left; }
   .txt-center {
     text-align: center; }
   .txt-right {
     text-align: right; }
+  .mix-txt_light {
+    color: #999999; }
+  .mix-txt_cursive {
+    font-family: "Indie Flower", cursive; }
+  .mix-txt_italic {
+    font-style: italic; }
   .vlist > * {
     padding: 10px 0; }
   .mix-vlist_divided > * + * {
