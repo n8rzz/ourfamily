@@ -1,20 +1,22 @@
 require 'rails_helper'
 
 describe 'posts/show.html.erb', type: :view do
-  let(:user) { create(:user) }
-
   subject { page }
 
-  before(:each) do
-    sign_in(user)
-  end
+  let(:user) { create(:user) }
+  let(:post) { create(:post, id: 2, created_at: 4.days.ago, user_id: user.id) }
+  let!(:older_post) { create(:post, id: 3, created_at: 8.days.ago, user_id: user.id) }
+  let!(:newer_post) { create(:post, id: 1, created_at: 2.days.ago, user_id: user.id) }
 
-  describe 'show' do
-    let(:post) { create(:post, id: 2, created_at: 4.days.ago) }
-    let!(:older_post) { create(:post, id: 3, created_at: 8.days.ago) }
-    let!(:newer_post) { create(:post, id: 1, created_at: 2.days.ago) }
+  describe 'when viewing users own post' do
+    before(:each) do
+      sign_in(user)
+      visit post_path(post)
+    end
 
-    before { visit post_path(post) }
+    after(:each) do
+      sign_out_user
+    end
 
     it { should render_template(:show) }
     it { should have_css('h1', text: 'OurFamily') }
@@ -26,7 +28,6 @@ describe 'posts/show.html.erb', type: :view do
     it { should have_css('a', text: 'Edit Post') }
     it { should have_selector('input[type=submit][value="Delete"]') }
     it { should have_content(user.name) }
-    # it { should have_css('a', text: 'Delete Post') }
 
     describe 'newest post' do
       before { visit post_path(newer_post) }
@@ -39,5 +40,17 @@ describe 'posts/show.html.erb', type: :view do
 
       it { should have_css('a', text: newer_post.title) }
     end
+  end
+
+  describe 'when viewing another users posts' do
+    let(:otherUser) { create(:user, first_name: 'Bobby', last_name: 'Small', email: 'bobby@eample.com', id: 2) }
+
+    before(:each) do
+      sign_in(otherUser)
+      visit post_path(post)
+    end
+
+    it { should_not have_css('a', text: 'Edit Post') }
+    it { should_not have_selector('input[type=submit][value="Delete"]') }
   end
 end
