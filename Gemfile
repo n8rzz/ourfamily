@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth', '~> 1.2.2'
 gem 'populator', '~> 1.0.0'
+gem 'aws-sdk-v1'
 gem "paperclip", "~> 4.3"
 gem 'faker', '~> 1.5.0'
 gem 'unread', '0.7.0'
@@ -23,6 +24,7 @@ group :development, :test do
   gem 'guard-rspec', '4.5.0', require: false
   gem 'guard-rubocop', '1.2.0', require: false
   gem 'guard-livereload', '2.5.1', require: false
+  gem 'dotenv-rails', '2.0.2'
 end
 
 group :test do
