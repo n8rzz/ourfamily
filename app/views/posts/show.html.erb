@@ -31,7 +31,13 @@
 
     <ul class="hlist">
       <li><%= link_to "New Post", new_post_path, :class => 'btn btn-sm' %></li>
-      <li><%= link_to "Edit Post", edit_post_path(@post.id), :class => 'btn btn-sm' %></li>
+
+      <% if correct_user?(@post.user) %>
+
+        <li><%= link_to "Edit Post", edit_post_path(@post.id), :class => 'btn btn-sm' %></li>
+        <li><%= button_to('Delete', @post, { :method => :delete, class: 'btn btn-sm' }) %></li>
+
+      <% end %>
     </ul>
   </div>
 </div>
@@ -47,4 +53,5 @@
         <div><%= link_to truncate(@older.title, :length => 20), @older %></div>
     <% end %>
   </div>
+
 </div>
