@@ -31,7 +31,10 @@
 
     <ul class="hlist">
       <li><%= link_to "New Post", new_post_path, :class => 'btn btn-sm' %></li>
+
       <li><%= link_to "Edit Post", edit_post_path(@post.id), :class => 'btn btn-sm' %></li>
+      <!-- <li><%= link_to "Delete", @post, :method => :delete, :class => 'btn btn&#45;sm' %></li> -->
+      <li><%= button_to('Delete', @post, { :method => :delete, class: 'btn btn-sm' }) %></li>
     </ul>
   </div>
 </div>

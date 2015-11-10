@@ -24,6 +24,7 @@ describe 'posts/show.html.erb', type: :view do
     it { should have_css('div', text: post.body) }
     it { should have_css('a', text: 'New Post') }
     it { should have_css('a', text: 'Edit Post') }
+    it { should have_selector('input[type=submit][value="Delete"]') }
     it { should have_content(user.name) }
     # it { should have_css('a', text: 'Delete Post') }
 
