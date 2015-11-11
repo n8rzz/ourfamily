@@ -15,7 +15,9 @@
 
     <div>
       <% if @post.photo.exists? %>
+        <div>
           <%= image_tag @post.photo.url %>
+        </div>
       <% end %>
 
       <%= @post.body %>
