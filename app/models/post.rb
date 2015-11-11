@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
 
   has_attached_file :photo,
                     styles: {
-                      medium: '800x800>',
+                      medium: '400x400>',
                       thumb: '100x100>'
                     },
                     url: ':s3_domain_url',

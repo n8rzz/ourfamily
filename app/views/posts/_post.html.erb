@@ -26,14 +26,18 @@
           </div>
       </div>
       <div class="excerpt-bd">
+
         <% if post.photo.exists? %>
-          <%= image_tag post.photo.url(:thumb) %>
+          <div>
+            <%= image_tag post.photo.url(:thumb) %>
+          </div>
         <% end %>
+
         <%= post.body %>
       </div>
       <div class="excerpt-ft">
-          <% if user_signed_in? %>
-              <div>{EDIT}</div>
+          <% if correct_user?(post.user) %>
+            <%= link_to "Edit Post", edit_post_path(post.id), :class => 'btn btn-sm' %>
           <% end %>
       </div>
   </div>
