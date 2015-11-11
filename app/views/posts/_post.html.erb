@@ -1,41 +1,40 @@
 <li>
     <% if post.seen_by_all? %>
-
       <div class="excerpt">
-
-      <% else %>
-
+    <% else %>
       <div class="excerpt mix-excerpt_isUnreadByAll">
-
     <% end %>
 
-        <div class="excerpt-hd">
-            <h2 class="hdg hdg_3"><%= link_to post.title, post %></h2>
-            <div class="txt txt-sm mix-txt_italic">
-              <ul class="hlist">
-                <li>
-                  <%= time_ago_in_words(post.created_at) %> ago
-                </li>
-                <li>
-                  <%= post.user.name %>
-                </li>
+      <div class="excerpt-hd">
+          <h2 class="hdg hdg_3"><%= link_to post.title, post %></h2>
+          <div class="txt txt-sm mix-txt_italic">
+            <ul class="hlist">
+              <li>
+                <%= time_ago_in_words(post.created_at) %> ago
+              </li>
+              <li>
+                <%= post.user.name %>
+              </li>
 
-                <% if post.seen_by_all? %>
+              <% if post.seen_by_all? %>
 
-                  <li>{READ}</li>
+                <li>{READ}</li>
 
-                <% end %>
+              <% end %>
 
-              </ul>
-            </div>
-        </div>
-        <div class="excerpt-bd">
-            <%= post.body %>
-        </div>
-        <div class="excerpt-ft">
-            <% if user_signed_in? %>
-                <div>{EDIT}</div>
-            <% end %>
-        </div>
-    </div>
+            </ul>
+          </div>
+      </div>
+      <div class="excerpt-bd">
+        <% if post.photo.exists? %>
+          <%= image_tag post.photo.url(:thumb) %>
+        <% end %>
+        <%= post.body %>
+      </div>
+      <div class="excerpt-ft">
+          <% if user_signed_in? %>
+              <div>{EDIT}</div>
+          <% end %>
+      </div>
+  </div>
 </li>
