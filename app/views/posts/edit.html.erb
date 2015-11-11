@@ -17,8 +17,17 @@
                 <%= f.text_area :body, :class => 'input input-textarea input-sm' %>
             </li>
             <li>
-                <%= f.label :photo, "Photo" %>
+              <%= f.label :photo, "Photo" %>
+              <br />
+
+              <% if @post.photo.exists? %>
+                <div>Change Attachment?</div>
                 <%= f.file_field :photo %>
+                <%= image_tag @post.photo.url(:medium) %>
+              <% else %>
+                <%= f.file_field :photo %>
+              <% end %>
+
             </li>
             <li>
                 <%= f.submit "Update Post", :class => 'btn' %>

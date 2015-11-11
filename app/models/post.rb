@@ -8,6 +8,10 @@ class Post < ActiveRecord::Base
   default_scope { order('created_at DESC') }
 
   has_attached_file :photo,
+                    styles: {
+                      medium: '400x400>',
+                      thumb: '100x100>'
+                    },
                     url: ':s3_domain_url',
                     path: '/images/:id/:style/:basename.:extension'
   validates_attachment_size :photo, less_than: 10.megabytes
