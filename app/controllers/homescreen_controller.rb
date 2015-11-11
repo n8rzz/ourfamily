@@ -3,6 +3,6 @@ class HomescreenController < ApplicationController
 
   def index
     @posts = Post.all
-    @users = User.order('last_sign_in_at DESC')
+    @users = User.order('last_seen DESC')
   end
 end
