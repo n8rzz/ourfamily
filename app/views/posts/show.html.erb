@@ -20,7 +20,7 @@
         </div>
       <% end %>
 
-      <%= @post.body %>
+      <%= simple_format(@post.body, wrapper_tag: 'div') %>
     </div>
 
     <div class="txt txt-sm mix-txt_light mix-txt_italic">
