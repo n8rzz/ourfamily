@@ -41,9 +41,10 @@ test:
   # It doesn't make sense to report to New Relic from automated test runs.
   monitor_mode: false
 
-# staging:
-#   <<: *default_settings
-#   app_name: My Application (Development)
+staging:
+  <<: *default_settings
+  license_key: 184c2d64603cefa109a8044c31480dc6f51b072b
+  app_name: ourfamilycircus-staging
 
 production:
   <<: *default_settings

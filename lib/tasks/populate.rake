@@ -21,7 +21,7 @@ namespace :db do
                  password: 'password',
                  current_sign_in_at: Faker::Time.between(3.days.ago, Time.now, :all),
                  last_sign_in_at: Faker::Time.between(7.days.ago, 3.days.ago, :all),
-                 created_at: Faker::Time.between(180.days.ago, 7.days.ago, :all)
+                 last_seen: Faker::Time.between(180.days.ago, 7.days.ago, :all)
                 )
 
     7.times do
@@ -36,7 +36,7 @@ namespace :db do
                    password: password,
                    current_sign_in_at: Faker::Time.between(3.days.ago, Time.now, :all),
                    last_sign_in_at: Faker::Time.between(7.days.ago, 3.days.ago, :all),
-                   created_at: Faker::Time.between(180.days.ago, 7.days.ago, :all)
+                   last_seen: Faker::Time.between(180.days.ago, 7.days.ago, :all)
                   )
     end
   end

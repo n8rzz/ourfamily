@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe 'homescreen#index.html.erb', type: :view do
   let(:user) { create(:user) }
-  let(:post) { create(:post) }
 
   subject { page }
 
@@ -24,7 +23,8 @@ describe 'homescreen#index.html.erb', type: :view do
   end
 
   describe 'when signed in' do
-    let(:user) { create(:user) }
+    let(:post) { create(:post) }
+
     before { sign_in(user) }
 
     it { should_not have_css('a', text: 'Register') }
@@ -37,7 +37,6 @@ describe 'homescreen#index.html.erb', type: :view do
     it { should have_content('Member Activity') }
     it { should have_css('li', text: user.name) }
     # it { should have_css('div', text: 'ago') }
-    # it { should have_css('div', text: post.user.email) }
-    # it { should have_css('div', text: '{EDIT}') }
+    # it { should have_css('a', text: 'Edit Post') }
   end
 end
