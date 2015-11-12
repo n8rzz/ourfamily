@@ -27,7 +27,11 @@ describe 'Application Pages' do
 
     it { should_not have_css('a', text: 'Register') }
     it { should_not have_css('a', text: 'Login') }
+    it { should have_css('a', text: 'Posts') }
+    it { should have_css('a', text: 'New Post') }
+    it { should have_css('a', text: 'Gallery') }
     it { should have_css('a', text: 'Profile') }
+
     it { should have_selector('input[type=submit][value="Logout"]') }
   end
 end
