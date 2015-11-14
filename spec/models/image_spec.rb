@@ -8,8 +8,8 @@ describe Image, type: :model do
   describe 'data and associations' do
     it { should have_db_column(:name) }
     it { should have_db_column(:description) }
-    it { should belong_to(:post) }
     it { should belong_to(:user) }
+    it { should belong_to(:post) }
   end
 
   before do
