@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#index'
 
+  resources :images, except: :index
   get 'gallery' => 'images#index'
-  get 'images/show'
-  get 'images/create'
-  get 'images/update'
-  get 'images/destroy'
 
   devise_for :users,
              controllers: { registrations: 'registrations' },
