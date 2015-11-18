@@ -186,11 +186,11 @@ img {
     vertical-align: top;
     font-size: 16px;
     box-sizing: border-box; }
-  .blocks_2up {
+  .blocks_2up > * {
     width: 50%; }
-  .blocks_3up {
+  .blocks_3up > * {
     width: 33.3334%; }
-  .blocks_4up {
+  .blocks_4up > * {
     width: 25%; }
   .box {
     padding: 20px;
@@ -521,11 +521,11 @@ img {
     vertical-align: top;
     font-size: 16px;
     box-sizing: border-box; }
-  .blocks_2up {
+  .blocks_2up > * {
     width: 50%; }
-  .blocks_3up {
+  .blocks_3up > * {
     width: 33.3334%; }
-  .blocks_4up {
+  .blocks_4up > * {
     width: 25%; }
   .box {
     padding: 20px;

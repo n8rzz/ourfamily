@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :image do
+    sequence(:id) { '#{n}' }
     name 'Sample Image Name'
     description 'Sample Image Description'
     user_id nil

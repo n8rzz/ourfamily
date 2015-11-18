@@ -10,9 +10,9 @@
     </ul>
   </div>
 
-  <div class="grid-col grid-col-md_6of6">
-    <%= render @images %>
+  <div class="grid-col grid-col-md_6of6" data-controller="js-gallery">
+    <ul class="blocks blocks_4up">
+      <%= render @images %>
+    </ul>
   </div>
 </div>
-
-<%= debug(@images) %>
