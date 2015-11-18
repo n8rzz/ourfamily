@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :image do
-    name 'MyString'
-    description 'MyString'
+    name 'Sample Image Name'
+    description 'Sample Image Description'
     user_id nil
   end
 

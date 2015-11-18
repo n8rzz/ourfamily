@@ -1,11 +1,18 @@
-<div class="grid-col grid-col-md_6of6">
-  <ul class="hlist">
-    <li>
-      <h2 class="hdg">Images#index</h2>
-    </li>
-    <li>Add Image to Gallery</li>
-  </ul>
-  <div>
-    ##gallery placeholder##
+<div class="grid">
+  <div class="grid-col grid-col-md_6of6">
+    <ul class="hlist">
+      <li>
+        <h2 class="hdg">Images#index</h2>
+      </li>
+      <li>
+        <%= link_to 'Add Image to Gallery', new_image_path, class: 'btn btn-sm' %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="grid-col grid-col-md_6of6">
+    <%= render @images %>
   </div>
 </div>
+
+<%= debug(@images) %>
