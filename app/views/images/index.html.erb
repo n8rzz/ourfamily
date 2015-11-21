@@ -1,18 +1,22 @@
 <div class="grid">
   <div class="grid-col grid-col-md_6of6">
-    <ul class="hlist">
-      <li>
-        <h2 class="hdg">Images#index</h2>
-      </li>
-      <li>
-        <%= link_to 'Add Image to Gallery', new_image_path, class: 'btn btn-sm' %>
-      </li>
-    </ul>
+    <div class="wrapper">
+      <ul class="hlist">
+        <li>
+          <h2 class="hdg">Images#index</h2>
+        </li>
+        <li>
+          <%= link_to 'Add Image to Gallery', new_image_path, class: 'btn btn-sm' %>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="grid-col grid-col-md_6of6" data-controller="js-gallery">
-    <ul class="blocks blocks_4up">
-      <%= render @images %>
-    </ul>
+    <div class="wrapper">
+      <ul class="blocks blocks_4up">
+        <%= render @images %>
+      </ul>
+    </div>
   </div>
 </div>

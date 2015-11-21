@@ -16,13 +16,11 @@ describe 'images/show.html.erb', type: :view do
     end
 
     it { should render_template :show }
-    # it { should have_css('h2', text: post.title) }
-    # it { should have_css('div', text: post.user.name) }
-    # it { should have_css('div', text: post.body) }
-    # it { should have_css('a', text: 'New Post') }
-    # it { should have_css('a', text: 'Edit Post') }
-    # it { should have_selector('input[type=submit][value="Delete"]') }
-    # it { should have_content(user.name) }
+    it { should have_css('a', text: 'Back to Gallery') }
+    it { should have_css('h2', text: image.name) }
+    # it { should have_selector('image') }
+    it { should have_css('div', text: image.user.name) }
+    it { should have_css('div', text: image.description) }
   end
 
   describe 'when viewing another users image' do

@@ -1,2 +1,16 @@
-<h1>Images#show</h1>
-<p>Find me in app/views/images/show.html.erb</p>
+<div>
+    <%= link_to 'Back to Gallery', gallery_path %>
+</div>
+
+<h2 class="hdg hdg_2"><%= @image.name %></h2>
+<div>
+    <div>
+      <%= image_tag(@image.attachment.url(:original)) %>
+    </div>
+    <div>
+      <%= @image.user.name %>
+    </div>
+    <div>
+      <%= @image.description %>
+    </div>
+</div>

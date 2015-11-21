@@ -1,7 +1,7 @@
 <li>
     <div>
         <div>
-          <%= link_to image_tag(image.attachment.url(:thumb)), image_path(image), class: 'js-thumbnailTrigger', :data => { :controller => 'thumbnailTrigger'  } %>
+          <%= link_to image_tag(image.attachment.url(:medium)), image_path(image), class: 'js-thumbnailTrigger', :data => { :controller => 'thumbnailTrigger'  } %>
         </div>
         <div>
           <%= image.name %>
