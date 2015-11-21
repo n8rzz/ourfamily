@@ -1,16 +1,21 @@
-<div>
-    <%= link_to 'Back to Gallery', gallery_path %>
-</div>
-
-<h2 class="hdg hdg_2"><%= @image.name %></h2>
-<div>
-    <div>
-      <%= image_tag(@image.attachment.url(:original)) %>
+<div class="grid">
+  <div class="grid-col grid-col-md_6of6">
+    <div class="wrapper">
+      <div>
+          <%= link_to 'Back to Gallery', gallery_path %>
+      </div>
+      <h2 class="hdg hdg_2"><%= @image.name %></h2>
+      <div>
+          <div>
+            <%= image_tag(@image.attachment.url(:original)) %>
+          </div>
+          <div class="txt txt-sm mix-txt_italic">
+            <%= @image.user.name %>
+          </div>
+          <div>
+            <%= @image.description %>
+          </div>
+      </div>
     </div>
-    <div>
-      <%= @image.user.name %>
-    </div>
-    <div>
-      <%= @image.description %>
-    </div>
+  </div>
 </div>
