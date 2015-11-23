@@ -16,10 +16,25 @@
               <br />
               <%= f.text_area :body, :class => 'input input-textarea input-sm' %>
           </li>
-          <li>
-              <%= f.label :photo, "Photo" %>
-              <%= f.file_field :photo %>
-          </li>
+
+          <%= f.fields_for :images, @post.images do |i| %>
+            <li>
+                <%= i.label :attachment, "Add a Photo to this Post" %>
+                <br />
+                <%= i.file_field :attachment %>
+            </li>
+            <li>
+                <%= i.label :name, 'Name' %>
+                <br />
+                <%= i.text_field :name, :class => 'input input-sm' %>
+            </li>
+            <li>
+                <%= i.label :description, 'Description' %>
+                <br />
+                <%= i.text_field :description, :class => 'input input-sm' %>
+            </li>
+          <% end %>
+
           <li>
               <%= f.submit "Add New Post", :class => 'btn' %>
           </li>

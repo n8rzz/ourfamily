@@ -11,7 +11,7 @@ describe Post, type: :model do
     it { should have_db_column(:published) }
     it { should belong_to(:user) }
     it { should have_many(:images) }
-    # it { should accept_nested_attributes_for(:image) }
+    it { should accept_nested_attributes_for(:images) }
   end
 
   before do
@@ -23,17 +23,17 @@ describe Post, type: :model do
   it { should respond_to(:title) }
   it { should respond_to(:body) }
   it { should respond_to(:published) }
-  it { should have_attached_file(:photo) }
+  # it { should have_attached_file(:image) }
   it { should be_valid }
 
-  describe 'post image attachment' do
-    it do
-      should validate_attachment_content_type(:photo)
-        .allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg')
-        .rejecting('text/plain', 'text/xml')
-    end
-    it { should validate_attachment_size(:photo).less_than(10.megabytes) }
-  end
+  # describe 'post image attachment' do
+  #   it do
+  #     should validate_attachment_content_type(:photo)
+  #       .allowing('image/png', 'image/gif', 'image/jpg', 'image/jpeg')
+  #       .rejecting('text/plain', 'text/xml')
+  #   end
+  #   it { should validate_attachment_size(:photo).less_than(10.megabytes) }
+  # end
 
   describe 'when title is not present' do
     before { @post.title = ' ' }
