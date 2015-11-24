@@ -14,13 +14,13 @@
 //    border: 1px solid;
 }
 
-.blocks_2up {
+.blocks_2up > * {
     width: 50%;
 }
 
-.blocks_3up {
+.blocks_3up > * {
     width: 33.3334%;
 }
-.blocks_4up {
+.blocks_4up > * {
     width: 25%;
 }

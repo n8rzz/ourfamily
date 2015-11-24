@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   acts_as_reader
   has_many :posts, dependent: :destroy
+  has_many :images, dependent: :destroy
 
   validates :first_name, :last_name, :birthday, presence: true
   validates :first_name, :last_name, length: { maximum: 50 }
