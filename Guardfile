@@ -31,18 +31,8 @@ guard 'bundler' do
   watch('Gemfile')
 end
 
-# Livereload config
-# guard 'livereload', grace_period: 0.5, host: '127.0.0.1', port: '3001' do
-#   watch(%r{app/views/.+\.(html|erb|haml|slim)$})
-#   watch(%r{app/helpers/.+\.rb})
-#   watch(%r{public/.+\.(css|js|html)})
-#   watch(%r{config/locales/.+\.yml})
-#   # Rails Assets Pipeline
-#   watch(%r{(app|vendor|src)(/\w+/(.+\.(css|scss|js|coffee|jsx|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
-# end
-
 group :red_green_refactor, halt_on_fail: true do
-  guard :rspec, cmd: "bundle exec rspec" do
+  guard :rspec, all_on_start: true, cmd: "bundle exec rspec" do
     require "guard/rspec/dsl"
     dsl = Guard::RSpec::Dsl.new(self)
 

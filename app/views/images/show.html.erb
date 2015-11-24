@@ -1,0 +1,35 @@
+<div class="grid">
+  <div class="grid-col grid-col-md_6of6">
+    <div class="wrapper">
+      <div>
+          <%= link_to 'Back to Gallery', gallery_path %>
+      </div>
+
+      <div>
+          <div>
+            <ul class="hlist">
+              <li>
+                <h2 class="hdg hdg_2"><%= @image.name %></h2>
+              </li>
+              <li>
+                <div class="txt txt-sm mix-txt_italic">
+                  <%= @image.user.name %>
+                </div>
+              </li>
+
+              <% if correct_user?(@image.user) %>
+                <li><%= button_to('Delete', @image, { :method => :delete, class: 'btn btn-sm' }) %></li>
+              <% end %>
+
+            </ul>
+          </div>
+          <div>
+            <%= image_tag(@image.attachment.url(:original)) %>
+          </div>
+          <div>
+            <%= @image.description %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
