@@ -11,7 +11,6 @@ describe Post, type: :model do
     it { should have_db_column(:published) }
     it { should belong_to(:user) }
     it { should_not have_many(:images) }
-    # it { should_not accept_nested_attributes_for(:image) }
   end
 
   before do

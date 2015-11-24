@@ -21,6 +21,7 @@ describe 'images/show.html.erb', type: :view do
     # it { should have_selector('image') }
     it { should have_css('div', text: image.user.name) }
     it { should have_css('div', text: image.description) }
+    it { should have_selector('input[type=submit][value="Delete"]') }
   end
 
   describe 'when viewing another users image' do
@@ -28,10 +29,10 @@ describe 'images/show.html.erb', type: :view do
 
     before(:each) do
       sign_in(otherUser)
-      # visit post_path(post)
+      visit image_path(image.id)
     end
 
     # it { should_not have_css('a', text: 'Edit Post') }
-    # it { should_not have_selector('input[type=submit][value="Delete"]') }
+    it { should_not have_selector('input[type=submit][value="Delete"]') }
   end
 end

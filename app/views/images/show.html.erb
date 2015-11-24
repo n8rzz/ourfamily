@@ -4,13 +4,27 @@
       <div>
           <%= link_to 'Back to Gallery', gallery_path %>
       </div>
-      <h2 class="hdg hdg_2"><%= @image.name %></h2>
+
       <div>
           <div>
-            <%= image_tag(@image.attachment.url(:original)) %>
+            <ul class="hlist">
+              <li>
+                <h2 class="hdg hdg_2"><%= @image.name %></h2>
+              </li>
+              <li>
+                <div class="txt txt-sm mix-txt_italic">
+                  <%= @image.user.name %>
+                </div>
+              </li>
+
+              <% if correct_user?(@image.user) %>
+                <li><%= button_to('Delete', @image, { :method => :delete, class: 'btn btn-sm' }) %></li>
+              <% end %>
+
+            </ul>
           </div>
-          <div class="txt txt-sm mix-txt_italic">
-            <%= @image.user.name %>
+          <div>
+            <%= image_tag(@image.attachment.url(:original)) %>
           </div>
           <div>
             <%= @image.description %>
