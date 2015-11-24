@@ -1,6 +1,5 @@
 class Image < ActiveRecord::Base
   belongs_to :user
-  belongs_to :post
 
   validates :name, presence: true, length: { maximum: 100 }
   validates :description, presence: true

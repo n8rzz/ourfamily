@@ -1,9 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  has_many :images, :through => :user, :dependent => :destroy
 
   acts_as_readable :on => :created_at
-  accepts_nested_attributes_for(:images)
 
   validates :title, presence: true, length: { maximum: 100 }
   validates :body, presence: true

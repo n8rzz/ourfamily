@@ -8,8 +8,10 @@ describe Image, type: :model do
   describe 'data and associations' do
     it { should have_db_column(:name) }
     it { should have_db_column(:description) }
+    it { should have_db_column(:user_id) }
+    it { should_not have_db_column(:post_id) }
     it { should belong_to(:user) }
-    it { should belong_to(:post) }
+    it { should_not belong_to(:post) }
   end
 
   before do
@@ -24,7 +26,6 @@ describe Image, type: :model do
   it { should respond_to(:description) }
   it { should validate_presence_of(:description) }
   it { should have_attached_file(:attachment) }
-  # it { should validate_presence_of(:attachment) }
   it { should be_valid }
 
   describe 'attachment' do
