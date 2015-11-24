@@ -238,6 +238,10 @@ img {
     display: block;
     width: 90%;
     text-align: center; }
+  .excerpt-bd {
+    padding: 10px 0 20px 0; }
+  .excerpt-bd > * + * {
+    margin-top: 20px; }
   /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
@@ -395,7 +399,7 @@ img {
     color: #0066cc; }
   .hlist > * {
     display: inline-block;
-    padding: 5px; }
+    padding: 5px 5px 5px 0; }
   .hlist_tight {
     margin-left: 5px; }
   .hlist_loose {
@@ -456,8 +460,10 @@ img {
     font-style: italic; }
   .vlist > * {
     padding: 10px 0; }
+  .mix-vlist_spacious > * + * {
+    margin-top: 20px; }
   .mix-vlist_divided > * + * {
-    border-top: 1px solid; }
+    border-top: 1px dashed; }
   /* ---------------------------------------------------------------------
  Vertical Rhythm
 
@@ -573,6 +579,10 @@ img {
     display: block;
     width: 90%;
     text-align: center; }
+  .excerpt-bd {
+    padding: 10px 0 20px 0; }
+  .excerpt-bd > * + * {
+    margin-top: 20px; }
   /* ---------------------------------------------------------------------
  Feature
 ------------------------------------------------------------------------ */
@@ -730,7 +740,7 @@ img {
     color: #0066cc; }
   .hlist > * {
     display: inline-block;
-    padding: 5px; }
+    padding: 5px 5px 5px 0; }
   .hlist_tight {
     margin-left: 5px; }
   .hlist_loose {
@@ -791,8 +801,10 @@ img {
     font-style: italic; }
   .vlist > * {
     padding: 10px 0; }
+  .mix-vlist_spacious > * + * {
+    margin-top: 20px; }
   .mix-vlist_divided > * + * {
-    border-top: 1px solid; }
+    border-top: 1px dashed; }
   /* ---------------------------------------------------------------------
  Vertical Rhythm
 

@@ -1,22 +1,26 @@
 <div class="grid">
-  <div class="grid-col grid-col-pull grid-col-sm_6of6 grid-col-md_2of6" data-controller="js-drawer">
-    <h2 class="hdg hdg_3 u-isHiddenSM">Member Activity</h2>
-    <h2 class="hdg hdg_3 u-isHiddenMD" data-controller="js-drawerTrigger">
-      <a href="#">Member Activity</a>
-    </h2>
-    <ol class="" data-controller="js-drawerView">
-        <% @users.each_with_index do |user| %>
-          <%= render partial: 'homescreen/user', object: user %>
-        <% end %>
-    </ol>
-  </div>
+    <div class="grid-col grid-col-pull grid-col-sm_6of6 grid-col-md_2of6" data-controller="js-drawer">
+        <div class="wrapper">
+            <h2 class="hdg hdg_3 u-isHiddenSM">Member Activity</h2>
+            <h2 class="hdg hdg_3 u-isHiddenMD" data-controller="js-drawerTrigger">
+                <a href="#">Member Activity</a>
+            </h2>
+            <ol class="" data-controller="js-drawerView">
+                <% @users.each_with_index do |user| %>
+                  <%= render partial: 'homescreen/user', object: user %>
+                <% end %>
+            </ol>
+        </div>
+    </div>
 
-  <div class="grid-col grid-col-sm_6of6 grid-col-md_4of6">
-    <h2 class="hdg hdg_2">Recent Posts</h2>
-    <ul class="vlist">
-        <%= render @posts %>
-    </ul>
-  </div>
+    <div class="grid-col grid-col-sm_6of6 grid-col-md_4of6">
+        <div class="wrapper">
+            <h2 class="hdg hdg_2">Recent Posts</h2>
+            <ol class="vlist mix-vlist_spacious mix-vlist_divided">
+                <%= render @posts %>
+            </ol>
+        </div>
+    </div>
 </div>
 
 
