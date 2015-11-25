@@ -1,49 +1,52 @@
 <div class="grid">
   <div class="grid-col grid-col-sm_6of6">
-    <h2 class="hdg hdg_3"><%= @post.title %></h2>
+    <div class="wrapper">
+      <h2 class="hdg hdg_3"><%= @post.title %></h2>
 
-    <div class="txt txt-sm mix-txt_italic">
+      <div class="txt txt-sm mix-txt_italic">
+        <ul class="hlist">
+          <li>
+            <%= time_ago_in_words(@post.created_at) %> ago
+          </li>
+          <li>
+            <%= @post.user.name%>
+          </li>
+        </ul>
+      </div>
+
+      <div class="">
+        <% if @post.photo.exists? %>
+          <div>
+            <%= image_tag @post.photo.url %>
+          </div>
+        <% end %>
+
+        <%= simple_format(@post.body, wrapper_tag: 'div') %>
+      </div>
+
+      <div class="txt txt-sm mix-txt_light mix-txt_italic">
+        <ul class="hlist">
+          <% @read_by.each do |read_by_user_name| %>
+            <li><%= read_by_user_name %></li>
+          <% end %>
+        </ul>
+      </div>
+
       <ul class="hlist">
-        <li>
-          <%= time_ago_in_words(@post.created_at) %> ago
-        </li>
-        <li>
-          <%= @post.user.name%>
-        </li>
-      </ul>
-    </div>
+        <li><%= link_to "New Post", new_post_path, :class => 'btn btn-sm' %></li>
 
-    <div>
-      <% if @post.photo.exists? %>
-        <div>
-          <%= image_tag @post.photo.url %>
-        </div>
-      <% end %>
+        <% if correct_user?(@post.user) %>
 
-      <%= simple_format(@post.body, wrapper_tag: 'div') %>
-    </div>
+          <li><%= link_to "Edit Post", edit_post_path(@post.id), :class => 'btn btn-sm' %></li>
+          <li><%= button_to('Delete', @post, { :method => :delete, class: 'btn btn-sm' }) %></li>
 
-    <div class="txt txt-sm mix-txt_light mix-txt_italic">
-      <ul class="hlist">
-        <% @read_by.each do |read_by_user_name| %>
-          <li><%= read_by_user_name %></li>
         <% end %>
       </ul>
     </div>
-
-    <ul class="hlist">
-      <li><%= link_to "New Post", new_post_path, :class => 'btn btn-sm' %></li>
-
-      <% if correct_user?(@post.user) %>
-
-        <li><%= link_to "Edit Post", edit_post_path(@post.id), :class => 'btn btn-sm' %></li>
-        <li><%= button_to('Delete', @post, { :method => :delete, class: 'btn btn-sm' }) %></li>
-
-      <% end %>
-    </ul>
   </div>
 </div>
 
+<!--
 <div class="grid">
   <div class="grid-col grid-col-sm_6of6 grid-col-md_3of6">
     <% if @newer %>
@@ -55,5 +58,5 @@
         <div><%= link_to truncate(@older.title, :length => 20), @older %></div>
     <% end %>
   </div>
-
+-->
 </div>
