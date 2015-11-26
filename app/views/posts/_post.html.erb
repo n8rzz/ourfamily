@@ -29,7 +29,7 @@
 
           <% if post.photo.exists? %>
               <div>
-                  <%= image_tag post.photo.url(:thumb) %>
+                  <%= image_tag post.photo.url(:medium) %>
               </div>
           <% end %>
 
