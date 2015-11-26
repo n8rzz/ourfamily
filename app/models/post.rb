@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
                       thumb: '100x100>'
                     },
                     url: ':s3_domain_url',
-                    path: '/images/:id/:style/:basename.:extension'
+                    path: '/post_attachments/:id/:style/:basename.:extension'
   validates_attachment_size :photo, less_than: 10.megabytes
   validates_attachment :photo, content_type: {
     content_type: [
