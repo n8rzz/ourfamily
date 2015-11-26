@@ -1,22 +1,62 @@
 import $ from 'jquery-browserify';
-// import Drawer from './controllers/Drawer';
+// import Base from './util/Base';
+import DrawerView from './Drawer/DrawerView';
 // import Gallery from './controllers/Gallery';
 
-var App = function() {
-  var $element = $('[data-controller="js-app"]');
+export default class App {
+    constructor($element) {
+        this.$element = $element;
+        this.$drawer = null;
 
-  console.log('app', this);
+        return this._init();
+    }
 
-  var $drawer = $element.find('[data-controller="js-drawer"]');
-  var $drawerTrigger = $element.find('[data-controller="js-drawerTrigger"]');
-  var $drawerView = $element.find('[data-controller="js-drawerView"]');
+    _init() {
 
-  $drawerTrigger.on('click', function(e) {
-    e.preventDefault();
+        return this._createChildren()
+                   ._enable();
+    }
 
-    $drawerView.slideToggle();
-  });
+    _createChildren() {
+        console.log('app');
+        this.$drawer = this.$element.find('[data-controller="js-drawer"]');
 
+        return this;
+    }
+
+    _enable() {
+        this.drawerView = new DrawerView(this.$drawer);
+
+        return this;
+    }
+
+    _disable() {
+        this.drawerView = null;
+        this.$drawer = null;
+
+        return this;
+    }
 }
 
-var app = App();
+
+
+// var App = function() {
+//   var $element = $('[data-controller="js-app"]');
+//
+//   console.log('app', $element);
+//
+//   var $alertView = $element.find('[data-controller="js-alertView"]');
+//
+//   var $drawer = $element.find('[data-controller="js-drawer"]');
+//   var $drawerTrigger = $element.find('[data-controller="js-drawerTrigger"]');
+//   var $drawerView = $element.find('[data-controller="js-drawerView"]');
+//
+//   $drawerTrigger.on('click', function(e) {
+//     e.preventDefault();
+//
+//     $drawerView.slideToggle();
+//   });
+//
+// }
+//
+// var app = App();

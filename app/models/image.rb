@@ -12,7 +12,7 @@ class Image < ActiveRecord::Base
                       thumb: '100x100>'
                     },
                     url: ':s3_domain_url',
-                    path: '/images/:id/:style/:basename.:extension'
+                    path: '/image_gallery_attachments/:id/:style/:basename.:extension'
   validates_attachment_size :attachment, less_than: 10.megabytes
   validates_attachment :attachment,
                        # presence: true,

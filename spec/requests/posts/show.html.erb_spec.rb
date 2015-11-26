@@ -29,17 +29,17 @@ describe 'posts/show.html.erb', type: :view do
     it { should have_selector('input[type=submit][value="Delete"]') }
     it { should have_content(user.name) }
 
-    describe 'newest post' do
-      before { visit post_path(newer_post) }
-
-      it { should have_css('a', text: older_post.title) }
-    end
-
-    describe 'oldest post' do
-      before { visit post_path(older_post) }
-
-      it { should have_css('a', text: newer_post.title) }
-    end
+    # describe 'newest post' do
+    #   before { visit post_path(newer_post) }
+    #
+    #   it { should have_css('a', text: older_post.title) }
+    # end
+    #
+    # describe 'oldest post' do
+    #   before { visit post_path(older_post) }
+    #
+    #   it { should have_css('a', text: newer_post.title) }
+    # end
   end
 
   describe 'when viewing another users posts' do

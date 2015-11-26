@@ -1,30 +1,31 @@
 <div class="grid">
   <div class="grid-col grid-col-sm_6of6 mix-grid-col-md_push1of6 grid-col-md_5of6">
-    <h2 class="hdg hdg_2">New Post</h2>
+    <div class="wrapper">
+      <h2 class="hdg hdg_2">New Post</h2>
 
-    <%= form_for @post, :html => { :multipart => true } do |f| %>
-      <%= render 'shared/error_messages', object: @post %>
+      <%= form_for @post, :html => { :multipart => true } do |f| %>
+        <%= render 'shared/error_messages', object: @post %>
 
-      <ul class="vlist">
-          <li>
-              <%= f.label :title, :class => 'input-label' %>
-              <br />
-              <%= f.text_field :title, :class => 'input input-sm' %>
-          </li>
-          <li>
-              <%= f.label :body, :class => 'input-label' %>
-              <br />
-              <%= f.text_area :body, :class => 'input input-textarea input-sm' %>
-          </li>
-          <li>
-              <%= f.label :photo, "Photo" %>
-              <%= f.file_field :photo %>
-          </li>
-          <li>
-              <%= f.submit "Add New Post", :class => 'btn' %>
-          </li>
-      </ul>
-    <% end %>
-
+        <ul class="vlist">
+            <li>
+                <%= f.label :title, :class => 'input-label' %>
+                <br />
+                <%= f.text_field :title, :class => 'input input-sm' %>
+            </li>
+            <li>
+                <%= f.label :body, :class => 'input-label' %>
+                <br />
+                <%= f.text_area :body, :class => 'input input-textarea input-sm' %>
+            </li>
+            <li>
+                <%= f.label :photo, "Photo" %>
+                <%= f.file_field :photo %>
+            </li>
+            <li>
+                <%= f.submit "Add New Post", :class => 'btn' %>
+            </li>
+        </ul>
+      <% end %>
+    </div>
   </div>
 </div>

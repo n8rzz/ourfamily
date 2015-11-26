@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#index'
 
-  resources :images, except: :index
+  resources :images, except: [:index, :edit, :update]
   get 'gallery' => 'images#index'
 
   devise_for :users,

@@ -28,7 +28,7 @@ options.DIR = {
 };
 
 options.FILE = {
-    JS_SRC_CLIENT: path.join(srcScriptsDir, '/app.js')
+    JS_SRC_CLIENT: path.join(srcScriptsDir, '/main.js')
 };
 
 options.GLOB = {
