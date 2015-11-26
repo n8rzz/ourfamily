@@ -20,7 +20,7 @@
           <li>
             <%= f.label :birthday, :class => 'input-label' %>
             <br />
-            <%= f.text_field :birthday, :class => 'input input-sm' %>
+            <%= f.text_field :birthday, :class => 'input input-sm', :data => {:controller => 'js-fieldMask'} %>
           </li>
           <li>
             <%= f.label :email, :class => 'input-label' %>
