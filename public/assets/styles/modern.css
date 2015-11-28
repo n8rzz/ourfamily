@@ -477,6 +477,8 @@ img {
     margin-bottom: 16px; }
   .vr_x6 {
     margin-bottom: 24px; }
+  .well {
+    background: #efefef; }
   .wrapper {
     padding: 20px; } }
 
@@ -818,6 +820,8 @@ img {
     margin-bottom: 16px; }
   .vr_x6 {
     margin-bottom: 24px; }
+  .well {
+    background: #efefef; }
   .wrapper {
     padding: 20px; }
   .masthead-left,

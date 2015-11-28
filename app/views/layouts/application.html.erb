@@ -26,7 +26,7 @@
       <div class="page-bd">
         <% flash.each do |message_type, message| %>
             <div class="wrapper">
-                <div class="alert alert-<%= message_type %>">
+                <div class="alert alert-<%= message_type %>" data-controller="js-alertView">
                     <%= message %>
                 </div>
             </div>
@@ -42,7 +42,7 @@
 
   <%= debug(params) if Rails.env.development? %>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
   <script src=<% root_path %>"/assets/scripts/bundle.js"></script>
 </body>
 </html>
