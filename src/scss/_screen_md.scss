@@ -4,7 +4,6 @@
 @import "landmarks/_page";
 @import "landmarks/masthead/_masthead";
 
-
 // ---------------------------------------------------------------------
 // Modules
 // ---------------------------------------------------------------------
@@ -19,9 +18,10 @@
 @import "modules/hlist/_hlist";
 @import "modules/input/_input";
 @import "modules/link/_link";
-@import "modules/media/_media.scss";
+@import "modules/media/_media";
 @import "modules/preview/_preview";
 @import "modules/txt/_txt";
 @import "modules/vlist/_vlist";
-@import "modules/vr/_vr.scss";
+@import "modules/vr/_vr";
+@import "modules/well/_well";
 @import "modules/wrapper/_wrapper";
