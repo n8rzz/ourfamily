@@ -3,12 +3,11 @@
 // ---------------------------------------------------------------------
 .hlist > * {
     display: inline-block;
-    // padding: 5px 5px 5px 0;
 }
 
-.hlist_tight { margin-left: 5px; }
+.hlist > * + * { margin-left: 5px; }
 
-.hlist_loose { margin-left: 15px; }
+.hlist_loose > * + * { margin-left: 15px; }
 
 .mix-hlist_divided > * + * {
     margin-left: 12px;
