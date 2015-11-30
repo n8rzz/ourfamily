@@ -13,6 +13,7 @@ gem "paperclip", "~> 4.3"
 gem 'faker', '~> 1.5.0'
 gem 'unread', '0.7.0'
 gem 'devise_lastseenable', '0.0.6'
+gem 'rack-timeout', '0.3.2'
 
 group :development, :test do
   gem 'rspec-rails', '3.2.1'
@@ -35,5 +36,6 @@ end
 
 group :production do
     gem 'rails_12factor'
-    gem 'newrelic_rpm'
+    gem 'newrelic_rpm', '3.14.0.305'
+    gem 'puma', '2.15.3'
 end

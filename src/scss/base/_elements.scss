@@ -6,6 +6,14 @@
     @include border-box;
 }
 
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+}
+
 ul {}
 ol {}
 img { max-width: 100%; }

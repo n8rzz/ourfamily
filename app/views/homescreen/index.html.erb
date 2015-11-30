@@ -5,7 +5,7 @@
             <h2 class="hdg hdg_3 u-isHiddenMD" data-controller="js-drawerTrigger">
                 <a href="#">Member Activity</a>
             </h2>
-            <ol class="" data-controller="js-drawerView">
+            <ol class="vlist" data-controller="js-drawerView">
                 <% @users.each_with_index do |user| %>
                   <%= render partial: 'homescreen/user', object: user %>
                 <% end %>

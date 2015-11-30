@@ -8,12 +8,12 @@
       <div class="excerpt-hd">
           <ul class="hlist">
             <li>
-              <h2 class="hdg hdg_3"><%= link_to post.title, post %></h2>
+              <h2 class="hdg hdg_3"><%= link_to post.title, post, class: 'link' %></h2>
             </li>
 
             <% if correct_user?(post.user) %>
               <li>
-                  <%= link_to "Edit", edit_post_path(post.id), :class => 'btn btn-sm' %>
+                <%= button_to('Edit', edit_post_path(post.id), { :method => :get, :class => 'btn btn-sm' }) %>
               </li>
               <li>
                   <%= button_to('Delete', post, { :method => :delete, class: 'btn btn-sm' }) %>
