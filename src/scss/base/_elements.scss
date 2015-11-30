@@ -6,6 +6,18 @@
     @include border-box;
 }
 
+a,
+a:visited {
+  color: $COLOR_PRIMARY;
+  text-decoration: none;
+}
+
+a:hover {
+    color: $COLOR_SECONDARY;
+    text-decoration: underline;
+    @include transition(all, .12s);
+}
+
 ul {}
 ol {}
 img { max-width: 100%; }

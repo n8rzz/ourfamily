@@ -7,13 +7,12 @@
     line-height: 1.2;
 }
 
-.hdg > a {
-    text-decoration: inherit;
-}
-
+// .hdg > a {
+//     text-decoration: inherit;
+// }
+//
 .hdg > a:hover {
-    color: $COLOR_SECONDARY;
-    @include transition(all, .12s);
+    text-decoration: none;
 }
 
 .hdg_1 {
