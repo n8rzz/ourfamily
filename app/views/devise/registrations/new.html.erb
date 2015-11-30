@@ -1,5 +1,5 @@
 <div class="grid">
-  <div class="grid-col grid-col-sm_6of6 mix-grid-col-md_push1of6 grid-col-md_5of6">
+  <div class="grid-col grid-col-sm_6of6 mix-grid-col-md_push1of6 grid-col-md_4of6">
     <div class="wrapper">
       <h2 class="hdg hdg_2">Create a new account</h2>
 
@@ -20,7 +20,7 @@
           <li>
             <%= f.label :birthday, :class => 'input-label' %>
             <br />
-            <%= f.text_field :birthday, :class => 'input input-sm' %>
+            <%= f.text_field :birthday, :class => 'input input-sm', :data => {:controller => 'js-fieldMask'} %>
           </li>
           <li>
             <%= f.label :email, :class => 'input-label' %>
