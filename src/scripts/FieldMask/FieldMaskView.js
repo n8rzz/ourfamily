@@ -2,15 +2,21 @@ import $ from 'jquery-browserify';
 
 /**
  * @property CHAR_CODES
+ * @type {array}
  * @constant
  */
 const CHAR_CODES = [45, 46, 47];
 
+/**
+ * @property REGEX_NUMBER
+ * @type {string}
+ * @constant
 const REGEX_NUMBER = /^[0-9]+$/;
 
 /**
  * @class FieldMaskView
  * @author Nate Geslin
+ * @beta
  */
 export default class FieldMaskView {
     constructor($element) {
@@ -104,22 +110,6 @@ export default class FieldMaskView {
         if (currentValue.length === 2 || currentValue.length === 5) {
 
             return this._addSlashToCurrentValue(currentValue);
-        }
-    }
-
-    _isValidNumber(currentValue) {
-
-    }
-
-    _isValidCharacterCode(currentValue) {
-        let length = currentValue.length;
-        let isValid = false;
-
-        for (let i = 0; i < CHAR_CODES.length; i++) {
-            const code = CHAR_CODES[i];
-
-
-            console.log('codes', code, code === currentValue.charCodeAt(length));
         }
     }
 
