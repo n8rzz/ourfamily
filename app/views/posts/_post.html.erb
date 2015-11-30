@@ -13,7 +13,7 @@
 
             <% if correct_user?(post.user) %>
               <li>
-                  <%= button_to('Edit', edit_post_path(post.id), :class => 'btn btn-sm' ) %>
+                <%= button_to('Edit', edit_post_path(post.id), { :method => :get, :class => 'btn btn-sm' }) %>
               </li>
               <li>
                   <%= button_to('Delete', post, { :method => :delete, class: 'btn btn-sm' }) %>
