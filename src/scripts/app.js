@@ -1,7 +1,7 @@
 import $ from 'jquery-browserify';
-// import Base from './util/Base';
 import DrawerView from './Drawer/DrawerView';
 import AlertView from './Alert/AlertView';
+// import FieldMaskView from './FieldMask/FieldMaskView';
 // import Gallery from './controllers/Gallery';
 
 /**
@@ -18,6 +18,8 @@ export default class App {
         this.drawrerView = null;
         this.$alert = null;
         this.alertView = null;
+        this.$fieldMask = null;
+        this.filedMaskView = null;
 
         return this._init();
     }
@@ -40,9 +42,8 @@ export default class App {
      */
     _createChildren() {
         this.$drawer = this.$element.find('[data-controller="js-drawer"]');
+        // this.$fieldMask = this.$element.find('[data-controller="js-fieldMask"]');
         this.$alert = this.$element.find('[data-controller="js-alertView"]');
-
-        console.log('app');
 
         return this;
     }
@@ -54,6 +55,7 @@ export default class App {
      */
     _enable() {
         this.drawerView = new DrawerView(this.$drawer);
+        // this.fieldMaskView = new FieldMaskView(this.$fieldMask);
         this.alertView = new AlertView(this.$alert);
 
         return this;
@@ -80,6 +82,8 @@ export default class App {
         this.$drawer = null;
         this.alertView = null;
         this.$alert = null;
+        // this.$fieldMask = null;
+        // this.fieldMaskView = null
 
         return this;
     }
