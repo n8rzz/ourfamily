@@ -1,6 +1,6 @@
 {
   "name": "ourfamily",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A social networking site for families to connect with each other",
   "main": "index.js",
   "scripts": {
