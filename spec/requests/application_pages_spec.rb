@@ -14,7 +14,6 @@ describe 'Application Pages' do
   it { should have_selector('div.page-ft') }
 
   describe 'when not signed in' do
-    # it { should redirect_to('/users/sign_in') }
     it { should have_css('a', text: 'Register') }
     it { should have_css('a', text: 'Login') }
     it { should_not have_css('a', text: 'Profile') }
@@ -23,7 +22,7 @@ describe 'Application Pages' do
 
   describe 'when signed in' do
     let(:user) { create(:user) }
-    before { sign_in(user) }
+    before { sign_in user }
 
     it { should_not have_css('a', text: 'Register') }
     it { should_not have_css('a', text: 'Login') }

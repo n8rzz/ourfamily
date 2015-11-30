@@ -46,7 +46,7 @@ describe PostsController, type: :controller do
 
         it 'redirects to the new post' do
           post :create, post: attributes_for(:post)
-          expect { (response).to redirect_to(home_path) }
+          expect { (response).to redirect_to(root_path) }
         end
       end
 
@@ -150,7 +150,7 @@ describe PostsController, type: :controller do
 
       it 'redirects to the homescreen' do
         delete :destroy, id: @post
-        expect { (response).to redirect_to(home_path) }
+        expect { (response).to redirect_to(root_path) }
       end
     end
   end

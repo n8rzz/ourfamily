@@ -10,7 +10,7 @@ describe 'posts/new.html.erb', type: :view do
       visit new_post_path
     end
 
-    it { should render_template(:new) }
+    it { should render_template :new }
     it { should have_css('h2', text: 'New Post') }
     it { should have_selector('#post_title') }
     it { should have_selector('#post_body') }

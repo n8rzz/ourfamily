@@ -2,17 +2,13 @@ require 'rails_helper'
 
 describe 'user logout' do
   subject { page }
-
   let(:user) { create(:user) }
 
-  before do
-    visit root_path
-    sign_in user
-  end
+  before { sign_in user }
 
   it 'allows the user to logout' do
     sign_out_user
 
-    should have_content('Signed out successfully.')
+    should have_content('You need to sign in or sign up before continuing.')
   end
 end

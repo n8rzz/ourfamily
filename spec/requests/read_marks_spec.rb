@@ -7,8 +7,6 @@ describe 'read marks' do
   let!(:userTwo) { create(:user, id: 2, first_name: 'Little', last_name: 'Blueberry', email: 'blue@example.com') }
   let!(:post) { create(:post) }
 
-  before { visit root_path }
-
   describe 'when a post is viewed by one user' do
     before do
       sign_in userOne
@@ -19,7 +17,6 @@ describe 'read marks' do
 
     describe 'then viewed by another user' do
       before do
-        visit root_path
         sign_out_user
         sign_in(userTwo)
         visit post_path(post)
@@ -31,7 +28,7 @@ describe 'read marks' do
   end
 
   describe 'when everyone has seen a post' do
-    before { visit home_path }
+    before { visit root_path }
 
     it { should_not have_css('.mix-excerpt_isUnreadByAll') }
   end

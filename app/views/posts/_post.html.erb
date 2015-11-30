@@ -8,7 +8,7 @@
       <div class="excerpt-hd">
           <ul class="hlist">
             <li>
-              <h2 class="hdg hdg_3"><%= link_to post.title, post %></h2>
+              <h2 class="hdg hdg_3"><%= link_to post.title, post, class: 'link' %></h2>
             </li>
 
             <% if correct_user?(post.user) %>
