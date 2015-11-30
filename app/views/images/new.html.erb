@@ -1,31 +1,33 @@
 <div class="grid">
-  <div class="gri-col grid-col-sm_6of6 mix-grid-col-md_push1of6 grid-col-md_5of6">
-    <h2 class="hdg hdg_2">Add New Image to Gallery</h2>
+    <div class="gri-col grid-col-sm_6of6 mix-grid-col-md_push1of6 grid-col-md_5of6">
+        <div class="wrapper">
+            <h2 class="hdg hdg_2">Add New Image to Gallery</h2>
 
-    <%= form_for @image, :html => { :multipart => true } do |f| %>
-      <%= render 'shared/error_messages', object: @image %>
+            <%= form_for @image, :html => { :multipart => true } do |f| %>
+              <%= render 'shared/error_messages', object: @image %>
 
-      <ul class="vlist">
-        <li>
-          <%= f.label :attachment, :class => 'input-label' %>
-          <br />
-          <%= f.file_field :attachment %>
-        </li>
-        <li>
-          <%= f.label :name, :class => 'input-label' %>
-          <br />
-          <%= f.text_field :name, :class => 'input input-sm' %>
-        </li>
-        <li>
-          <%= f.label :description, :class => 'input-label' %>
-          <br />
-          <%= f.text_field :description, :class => 'input input-sm' %>
-        </li>
-        <li>
-          <%= f.submit 'Add Image', :class => 'btn' %>
-        </li>
-      </ul>
-    <% end %>
+              <ul class="vlist">
+                <li>
+                  <%= f.label :attachment, :class => 'input-label' %>
+                  <br />
+                  <%= f.file_field :attachment %>
+                </li>
+                <li>
+                  <%= f.label :name, :class => 'input-label' %>
+                  <br />
+                  <%= f.text_field :name, :class => 'input input-sm' %>
+                </li>
+                <li>
+                  <%= f.label :description, :class => 'input-label' %>
+                  <br />
+                  <%= f.text_field :description, :class => 'input input-sm' %>
+                </li>
+                <li>
+                  <%= f.submit 'Add Image', :class => 'btn' %>
+                </li>
+              </ul>
+            <% end %>
 
-  </div>
+        </div>
+    </div>
 </div>

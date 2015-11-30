@@ -39,18 +39,16 @@
     background: #cccccc !important; /* override hovers - disabled buttons don't have hover states */
 }
 
-.btn_cta {
-    background: #d53b3b;
-}
-
-.btn_cta:hover {
-    background: $COLOR_ALERT;
-}
-
 .btn_block {
     display: block;
     width: 100%;
     text-align: center;
 }
 
-.btn_group {}
+.mix-btn_alert {
+    background: #d53b3b;
+}
+
+.mix-btn_alert:hover {
+    background: $COLOR_ALERT;
+}
