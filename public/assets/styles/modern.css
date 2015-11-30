@@ -409,8 +409,8 @@ img {
     padding-left: 12px;
     border-left: 1px solid; }
   .input {
-    width: 500px;
-    max-width: 85%;
+    width: 100%;
+    max-width: 600px;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid #222222;
@@ -752,8 +752,8 @@ img {
     padding-left: 12px;
     border-left: 1px solid; }
   .input {
-    width: 500px;
-    max-width: 85%;
+    width: 100%;
+    max-width: 600px;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid #222222;

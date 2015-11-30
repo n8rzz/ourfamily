@@ -1,29 +1,47 @@
 import $ from 'jquery-browserify';
 
 /**
+ * @property CHAR_CODES
+ * @constant
+ */
+const CHAR_CODES = [45, 46, 47];
+
+const REGEX_NUMBER = /^[0-9]+$/;
+
+/**
  * @class FieldMaskView
  * @author Nate Geslin
  */
 export default class FieldMaskView {
     constructor($element) {
-        this.$element = $element;
 
-        return this._init();
+        return this._init($element);
     }
 
     /**
     * @method _init
     * @chainable
     */
-    _init() {
+    _init($element) {
+        if ($element.length < 1) {
+            return;
+        }
+
+        this.$element = $element;
+        console.log('FieldMask');
 
         return this._setupHandlers()
                    ._createChildren()
                    ._enable();
     }
 
+    /**
+     * @method _setupHandlers
+     * @private
+     * @chainable
+     */
     _setupHandlers() {
-        this._onChangeHanlder = $.proxy(this._onChange, this);
+        this._onChangeHandler = $.proxy(this._onChange, this);
 
         return this;
     }
@@ -53,6 +71,8 @@ export default class FieldMaskView {
     * @chainable
     */
     _disable() {
+        this.$element.off('change', this._onChangeHandler);
+        this.$element.off('keyup', this._onChangeHandler);
 
         return this;
     }
@@ -66,8 +86,50 @@ export default class FieldMaskView {
         return this;
     }
 
+    /**
+     * Evaluate the current value of $element and add slashes to current value
+     *
+     * @method _onChange
+     * @param event {JQuery Event|object}
+     */
     _onChange(event) {
+        let currentValue = this.$element.val();
+        let length = currentValue.length - 1;
 
-      console.log('change', event);
+        if (!REGEX_NUMBER.test(currentValue.charAt(length))) {
+            let transformedValue = currentValue.slice(0, length);
+            this.$element.val(transformedValue);
+        }
+
+        if (currentValue.length === 2 || currentValue.length === 5) {
+
+            return this._addSlashToCurrentValue(currentValue);
+        }
+    }
+
+    _isValidNumber(currentValue) {
+
+    }
+
+    _isValidCharacterCode(currentValue) {
+        let length = currentValue.length;
+        let isValid = false;
+
+        for (let i = 0; i < CHAR_CODES.length; i++) {
+            const code = CHAR_CODES[i];
+
+
+            console.log('codes', code, code === currentValue.charCodeAt(length));
+        }
+    }
+
+    /**
+     * @method _addSlashToCurrentValue
+     * @param currentValue {string}
+     */
+    _addSlashToCurrentValue(currentValue) {
+        let transformedValue = currentValue + '/';
+
+        this.$element.val(transformedValue);
     }
 }
