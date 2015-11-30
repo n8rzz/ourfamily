@@ -36,7 +36,7 @@
                     <% end %>
 
                   <li>
-                    <%= f.label :current_password, :class => 'input-label' %> <i>(we need your current password to confirm your changes)</i>
+                    <%= f.label :current_password, :class => 'input-label' %> <span class="txt txt-sm">(required to confirm your changes)</span>
                     <br />
                     <%= f.password_field :current_password, :class => 'input input-sm', autocomplete: "off" %>
                   </li>
@@ -65,9 +65,8 @@
             </div>
 
             <div>
-                <%= f.submit "Update", :class => 'btn' %>
+                <%= f.submit "Update", :class => 'btn btn_block' %>
             </div>
-
 
       <% end %>
 

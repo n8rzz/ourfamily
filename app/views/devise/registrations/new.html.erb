@@ -18,7 +18,7 @@
             <%= f.text_field :last_name, :class => 'input input-sm' %>
           </li>
           <li>
-            <%= f.label :birthday, :class => 'input-label' %>
+            <%= f.label :birthday, :class => 'input-label' %> <span class="txt txt-sm">(mm/dd/yyyy)</span>
             <br />
             <%= f.text_field :birthday, :class => 'input input-sm', :data => {:controller => 'js-fieldMask'} %>
           </li>
@@ -30,8 +30,9 @@
           <li>
             <%= f.label :password, :class => 'input-label' %>
             <% if @validatable %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
+              <span class="txt txt-sm">(<%= @minimum_password_length %> characters minimum)</span>
+            <% end %>
+            <br />
             <%= f.password_field :password, :class => 'input input-sm', autocomplete: "off" %>
           </li>
           <li>
@@ -39,7 +40,7 @@
             <%= f.password_field :password_confirmation, :class => 'input input-sm', autocomplete: "off" %>
           </li>
           <li>
-            <%= f.submit "Sign up", :class => 'btn' %>
+            <%= f.submit "Sign up", :class => 'btn btn_block' %>
           </li>
         </ul>
 
