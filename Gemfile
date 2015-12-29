@@ -11,7 +11,6 @@ gem 'populator', '~> 1.0.0'
 gem 'aws-sdk-v1'
 gem "paperclip", "~> 4.3"
 gem 'faker', '~> 1.5.0'
-gem 'unread', '0.7.0'
 gem 'devise_lastseenable', '0.0.6'
 gem 'rack-timeout', '0.3.2'
 

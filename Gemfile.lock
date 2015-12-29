@@ -255,8 +255,6 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    unread (0.7.0)
-      activerecord (>= 3)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -294,4 +292,3 @@ DEPENDENCIES
   rubocop
   sdoc (~> 0.4.0)
   shoulda-matchers (= 2.8.0)
-  unread (= 0.7.0)

@@ -1,8 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
 
-  acts_as_readable :on => :created_at
-
   validates :title, presence: true, length: { maximum: 100 }
   validates :body, presence: true
 
@@ -31,13 +29,5 @@ class Post < ActiveRecord::Base
 
   def newer
     self.class.where('id < ?', id).last
-  end
-
-  def seen_by_all?
-    if User.have_not_read(self).map(&:name).length == 0
-      @seen_by_all = true
-    else
-      @seen_by_all = false
-    end
   end
 end

@@ -1,46 +1,32 @@
 <li>
-  <% if post.seen_by_all? %>
     <div class="excerpt">
-  <% else %>
-    <div class="excerpt mix-excerpt_isUnreadByAll">
-  <% end %>
-
       <div class="excerpt-hd">
           <ul class="hlist">
-            <li>
-              <h2 class="hdg hdg_3"><%= link_to post.title, post, class: 'link' %></h2>
-            </li>
+              <li>
+                <h2 class="hdg hdg_3"><%= link_to post.title, post, class: 'link' %></h2>
+              </li>
 
-            <% if correct_user?(post.user) %>
-              <li>
-                  <%= button_to('Edit', edit_post_path(post.id), { :method => :get, :class => 'btn btn-sm' }) %>
-              </li>
-              <li>
-                  <%= button_to('Delete', post, { :method => :delete, class: 'btn btn-sm mix-btn_alert' }) %>
-              </li>
-            <% end %>
+              <% if correct_user?(post.user) %>
+                  <li>
+                      <%= button_to('Edit', edit_post_path(post.id), { :method => :get, :class => 'btn btn-sm' }) %>
+                  </li>
+                  <li>
+                      <%= button_to('Delete', post, { :method => :delete, class: 'btn btn-sm mix-btn_alert' }) %>
+                  </li>
+              <% end %>
 
           </ul>
           <ul class="hlist">
               <li>
-                <div class="txt txt-sm mix-txt_italic">
-                  <%= time_ago_in_words(post.created_at) %> ago
-                </div>
+                  <div class="txt txt-sm mix-txt_italic">
+                      <%= time_ago_in_words(post.created_at) %> ago
+                  </div>
               </li>
               <li>
-                <div class="txt txt-sm mix-txt_italic">
-                  <%= post.user.name %>
-                </div>
+                  <div class="txt txt-sm mix-txt_italic">
+                      <%= post.user.name %>
+                  </div>
               </li>
-
-              <% if post.seen_by_all? %>
-                  <li>
-                    <div class="txt txt-sm mix-txt_italic">
-                      <span class="">READ</span>
-                    </div>
-                  </li>
-              <% end %>
-
           </ul>
       </div>
       <div class="excerpt-bd">
@@ -52,8 +38,6 @@
           <% end %>
 
           <%= simple_format(post.body, wrapper_tag: 'div') %>
-      </div>
-      <div class="excerpt-ft">
       </div>
   </div>
 </li>
