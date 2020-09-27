@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.6.4'
 
 gem 'rails', '4.2.11.3'
-gem 'devise', '4.0'
+gem 'devise', '4.4'
 gem 'pg', '0.20'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
