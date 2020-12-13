@@ -6,7 +6,7 @@ gem 'devise', '4.4'
 gem 'pg', '0.20'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'omniauth', '~> 1.2.2'
+gem 'omniauth', '~> 1.9.1'
 gem 'populator', '~> 1.0.0'
 gem 'aws-sdk-v1'
 gem 'paperclip', '~> 4.3'
