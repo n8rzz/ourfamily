@@ -13,7 +13,6 @@
                 <% if user_signed_in? %>
                   <li><%= link_to "New Post", new_post_path, class: 'link' %></li>
                   <li><%= link_to "Gallery", gallery_path, class: 'link' %></li>
-                  <li><%= link_to "Profile", edit_user_registration_path, class: 'link' %></li>
                   <li><%= button_to('Logout', destroy_user_session_path, { :method => :delete, class: 'btnAsLink' }) %></li>
                 <% else %>
                   <li><%= link_to "Login", user_session_path, class: 'link' %></li>
